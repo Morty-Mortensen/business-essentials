@@ -1,3 +1,29 @@
-<!--<p>home works!</p>-->
+
+<div class="home-container">
+<!--    Make a big picture component later (for sub pages)-->
+    <div class="home-main-picture-container">
+        <img class="home-main-picture" src="assets/main_page.jpg"/>
+        <div class="home-picture-text-container">
+            <h1 class="home-picture-text-normal">Discover the <h2 class="home-picture-text-abnormal">Un</h2>imaginable</h1>
+        </div>
+    </div>
+    <div class="home-articles-container">
+        <app-article-display-box
+                [title]="'Title Here'"
+                [subtitle]="'Subtitle Here'"
+                [imageRef]="'assets/dice.jpg'"
+                [description]="'Here is a description...'"></app-article-display-box>
+        <app-article-display-box
+                [title]="'Title 2 Here'"
+                [subtitle]="'Subtitle 2 Here'"
+                [imageRef]="'assets/dice.jpg'"
+                [description]="'Here is a description 2...'"></app-article-display-box>
+        <app-article-display-box
+                [title]="'Title 3 Here'"
+                [subtitle]="'Subtitle 3 Here'"
+                [imageRef]="'assets/dice.jpg'"
+                [description]="'Here is a description 3...'"></app-article-display-box>
+    </div>
+</div>
 
 

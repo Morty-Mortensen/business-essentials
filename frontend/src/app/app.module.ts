@@ -10,6 +10,13 @@ import { MarketingComponent } from './views/marketing/marketing.component';
 import { DotaComponent } from './views/dota/dota.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { HeaderComponent } from './components/header/header.component';
+import { MainNavigationComponent } from './components/main-navigation/main-navigation.component';
+import { SubNavigationComponent } from './components/sub-navigation/sub-navigation.component';
+import { ArticleDisplayBoxComponent } from './components/main-page/article-display-box/article-display-box.component';
+import { RegisterComponent } from './views/register/register.component';
+import { LoginComponent } from './views/login/login.component';
+import { UserInformationCardComponent } from './components/user-information-card/user-information-card.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +27,13 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
     MarketingComponent,
     DotaComponent,
     FooterComponent,
+    HeaderComponent,
+    MainNavigationComponent,
+    SubNavigationComponent,
+    ArticleDisplayBoxComponent,
+    RegisterComponent,
+    LoginComponent,
+    UserInformationCardComponent,
   ],
   imports: [
     BrowserModule,

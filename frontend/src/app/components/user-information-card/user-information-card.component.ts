@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-user-information-card',
@@ -8,7 +9,8 @@ import {Component, Input, OnInit} from '@angular/core';
 export class UserInformationCardComponent implements OnInit {
 
   @Input() title : string = ""
-  @Input() buttonTitle : string = ""
+  @Input() login : boolean = false
+  @Input() register : boolean = false
   @Input() firstNameSwitch : boolean = false
   @Input() lastNameSwitch : boolean = false
   @Input() emailSwitch : boolean = false
@@ -16,16 +18,31 @@ export class UserInformationCardComponent implements OnInit {
   @Input() uploadPhotoSwitch : boolean = false
   @Input() forgotPasswordSwitch : boolean = false
 
+  form = new FormGroup({
+    firstName: new FormControl(),
+    lastName: new FormControl(),
+    email: new FormControl(),
+    password: new FormControl(),
+    imageBase64: new FormControl()
+  })
 
-  firstName : string = ""
-  lastName : string = ""
-  email : string = ""
-  password : string = ""
-  imageBase64 : string = ""
+
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void
+  {
+
+  }
+
+  public loginUser()
+  {
+
+  }
+
+  public registerUser()
+  {
+
   }
 
 }

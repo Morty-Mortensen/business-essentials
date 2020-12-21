@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from "@angular/common";
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +18,8 @@ import { ArticleDisplayBoxComponent } from './components/main-page/article-displ
 import { RegisterComponent } from './views/register/register.component';
 import { LoginComponent } from './views/login/login.component';
 import { UserInformationCardComponent } from './components/user-information-card/user-information-card.component';
+import { HttpClientModule } from "@angular/common/http";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -39,6 +42,10 @@ import { UserInformationCardComponent } from './components/user-information-card
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
+    HttpClientModule,
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

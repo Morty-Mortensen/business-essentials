@@ -70,17 +70,258 @@ CMakeFiles/backend.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/backend.dir/main.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tyler/PersonalProjects/business-essentials/backend/main.cpp -o CMakeFiles/backend.dir/main.cpp.s
 
+CMakeFiles/backend.dir/config/mongoose.c.o: CMakeFiles/backend.dir/flags.make
+CMakeFiles/backend.dir/config/mongoose.c.o: ../config/mongoose.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tyler/PersonalProjects/business-essentials/backend/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/backend.dir/config/mongoose.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/backend.dir/config/mongoose.c.o   -c /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose.c
+
+CMakeFiles/backend.dir/config/mongoose.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/backend.dir/config/mongoose.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose.c > CMakeFiles/backend.dir/config/mongoose.c.i
+
+CMakeFiles/backend.dir/config/mongoose.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/backend.dir/config/mongoose.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose.c -o CMakeFiles/backend.dir/config/mongoose.c.s
+
+CMakeFiles/backend.dir/config/mongoose/Controller.cpp.o: CMakeFiles/backend.dir/flags.make
+CMakeFiles/backend.dir/config/mongoose/Controller.cpp.o: ../config/mongoose/Controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tyler/PersonalProjects/business-essentials/backend/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/backend.dir/config/mongoose/Controller.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/backend.dir/config/mongoose/Controller.cpp.o -c /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Controller.cpp
+
+CMakeFiles/backend.dir/config/mongoose/Controller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/backend.dir/config/mongoose/Controller.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Controller.cpp > CMakeFiles/backend.dir/config/mongoose/Controller.cpp.i
+
+CMakeFiles/backend.dir/config/mongoose/Controller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/backend.dir/config/mongoose/Controller.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Controller.cpp -o CMakeFiles/backend.dir/config/mongoose/Controller.cpp.s
+
+CMakeFiles/backend.dir/config/mongoose/JsonController.cpp.o: CMakeFiles/backend.dir/flags.make
+CMakeFiles/backend.dir/config/mongoose/JsonController.cpp.o: ../config/mongoose/JsonController.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tyler/PersonalProjects/business-essentials/backend/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/backend.dir/config/mongoose/JsonController.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/backend.dir/config/mongoose/JsonController.cpp.o -c /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/JsonController.cpp
+
+CMakeFiles/backend.dir/config/mongoose/JsonController.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/backend.dir/config/mongoose/JsonController.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/JsonController.cpp > CMakeFiles/backend.dir/config/mongoose/JsonController.cpp.i
+
+CMakeFiles/backend.dir/config/mongoose/JsonController.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/backend.dir/config/mongoose/JsonController.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/JsonController.cpp -o CMakeFiles/backend.dir/config/mongoose/JsonController.cpp.s
+
+CMakeFiles/backend.dir/config/mongoose/JsonResponse.cpp.o: CMakeFiles/backend.dir/flags.make
+CMakeFiles/backend.dir/config/mongoose/JsonResponse.cpp.o: ../config/mongoose/JsonResponse.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tyler/PersonalProjects/business-essentials/backend/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/backend.dir/config/mongoose/JsonResponse.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/backend.dir/config/mongoose/JsonResponse.cpp.o -c /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/JsonResponse.cpp
+
+CMakeFiles/backend.dir/config/mongoose/JsonResponse.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/backend.dir/config/mongoose/JsonResponse.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/JsonResponse.cpp > CMakeFiles/backend.dir/config/mongoose/JsonResponse.cpp.i
+
+CMakeFiles/backend.dir/config/mongoose/JsonResponse.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/backend.dir/config/mongoose/JsonResponse.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/JsonResponse.cpp -o CMakeFiles/backend.dir/config/mongoose/JsonResponse.cpp.s
+
+CMakeFiles/backend.dir/config/mongoose/Mutex.cpp.o: CMakeFiles/backend.dir/flags.make
+CMakeFiles/backend.dir/config/mongoose/Mutex.cpp.o: ../config/mongoose/Mutex.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tyler/PersonalProjects/business-essentials/backend/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/backend.dir/config/mongoose/Mutex.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/backend.dir/config/mongoose/Mutex.cpp.o -c /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Mutex.cpp
+
+CMakeFiles/backend.dir/config/mongoose/Mutex.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/backend.dir/config/mongoose/Mutex.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Mutex.cpp > CMakeFiles/backend.dir/config/mongoose/Mutex.cpp.i
+
+CMakeFiles/backend.dir/config/mongoose/Mutex.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/backend.dir/config/mongoose/Mutex.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Mutex.cpp -o CMakeFiles/backend.dir/config/mongoose/Mutex.cpp.s
+
+CMakeFiles/backend.dir/config/mongoose/Request.cpp.o: CMakeFiles/backend.dir/flags.make
+CMakeFiles/backend.dir/config/mongoose/Request.cpp.o: ../config/mongoose/Request.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tyler/PersonalProjects/business-essentials/backend/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/backend.dir/config/mongoose/Request.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/backend.dir/config/mongoose/Request.cpp.o -c /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Request.cpp
+
+CMakeFiles/backend.dir/config/mongoose/Request.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/backend.dir/config/mongoose/Request.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Request.cpp > CMakeFiles/backend.dir/config/mongoose/Request.cpp.i
+
+CMakeFiles/backend.dir/config/mongoose/Request.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/backend.dir/config/mongoose/Request.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Request.cpp -o CMakeFiles/backend.dir/config/mongoose/Request.cpp.s
+
+CMakeFiles/backend.dir/config/mongoose/Response.cpp.o: CMakeFiles/backend.dir/flags.make
+CMakeFiles/backend.dir/config/mongoose/Response.cpp.o: ../config/mongoose/Response.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tyler/PersonalProjects/business-essentials/backend/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/backend.dir/config/mongoose/Response.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/backend.dir/config/mongoose/Response.cpp.o -c /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Response.cpp
+
+CMakeFiles/backend.dir/config/mongoose/Response.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/backend.dir/config/mongoose/Response.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Response.cpp > CMakeFiles/backend.dir/config/mongoose/Response.cpp.i
+
+CMakeFiles/backend.dir/config/mongoose/Response.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/backend.dir/config/mongoose/Response.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Response.cpp -o CMakeFiles/backend.dir/config/mongoose/Response.cpp.s
+
+CMakeFiles/backend.dir/config/mongoose/Server.cpp.o: CMakeFiles/backend.dir/flags.make
+CMakeFiles/backend.dir/config/mongoose/Server.cpp.o: ../config/mongoose/Server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tyler/PersonalProjects/business-essentials/backend/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/backend.dir/config/mongoose/Server.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/backend.dir/config/mongoose/Server.cpp.o -c /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Server.cpp
+
+CMakeFiles/backend.dir/config/mongoose/Server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/backend.dir/config/mongoose/Server.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Server.cpp > CMakeFiles/backend.dir/config/mongoose/Server.cpp.i
+
+CMakeFiles/backend.dir/config/mongoose/Server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/backend.dir/config/mongoose/Server.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Server.cpp -o CMakeFiles/backend.dir/config/mongoose/Server.cpp.s
+
+CMakeFiles/backend.dir/config/mongoose/Session.cpp.o: CMakeFiles/backend.dir/flags.make
+CMakeFiles/backend.dir/config/mongoose/Session.cpp.o: ../config/mongoose/Session.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tyler/PersonalProjects/business-essentials/backend/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/backend.dir/config/mongoose/Session.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/backend.dir/config/mongoose/Session.cpp.o -c /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Session.cpp
+
+CMakeFiles/backend.dir/config/mongoose/Session.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/backend.dir/config/mongoose/Session.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Session.cpp > CMakeFiles/backend.dir/config/mongoose/Session.cpp.i
+
+CMakeFiles/backend.dir/config/mongoose/Session.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/backend.dir/config/mongoose/Session.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Session.cpp -o CMakeFiles/backend.dir/config/mongoose/Session.cpp.s
+
+CMakeFiles/backend.dir/config/mongoose/Sessions.cpp.o: CMakeFiles/backend.dir/flags.make
+CMakeFiles/backend.dir/config/mongoose/Sessions.cpp.o: ../config/mongoose/Sessions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tyler/PersonalProjects/business-essentials/backend/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/backend.dir/config/mongoose/Sessions.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/backend.dir/config/mongoose/Sessions.cpp.o -c /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Sessions.cpp
+
+CMakeFiles/backend.dir/config/mongoose/Sessions.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/backend.dir/config/mongoose/Sessions.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Sessions.cpp > CMakeFiles/backend.dir/config/mongoose/Sessions.cpp.i
+
+CMakeFiles/backend.dir/config/mongoose/Sessions.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/backend.dir/config/mongoose/Sessions.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Sessions.cpp -o CMakeFiles/backend.dir/config/mongoose/Sessions.cpp.s
+
+CMakeFiles/backend.dir/config/mongoose/StreamResponse.cpp.o: CMakeFiles/backend.dir/flags.make
+CMakeFiles/backend.dir/config/mongoose/StreamResponse.cpp.o: ../config/mongoose/StreamResponse.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tyler/PersonalProjects/business-essentials/backend/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/backend.dir/config/mongoose/StreamResponse.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/backend.dir/config/mongoose/StreamResponse.cpp.o -c /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/StreamResponse.cpp
+
+CMakeFiles/backend.dir/config/mongoose/StreamResponse.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/backend.dir/config/mongoose/StreamResponse.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/StreamResponse.cpp > CMakeFiles/backend.dir/config/mongoose/StreamResponse.cpp.i
+
+CMakeFiles/backend.dir/config/mongoose/StreamResponse.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/backend.dir/config/mongoose/StreamResponse.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/StreamResponse.cpp -o CMakeFiles/backend.dir/config/mongoose/StreamResponse.cpp.s
+
+CMakeFiles/backend.dir/config/mongoose/UploadFile.cpp.o: CMakeFiles/backend.dir/flags.make
+CMakeFiles/backend.dir/config/mongoose/UploadFile.cpp.o: ../config/mongoose/UploadFile.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tyler/PersonalProjects/business-essentials/backend/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/backend.dir/config/mongoose/UploadFile.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/backend.dir/config/mongoose/UploadFile.cpp.o -c /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/UploadFile.cpp
+
+CMakeFiles/backend.dir/config/mongoose/UploadFile.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/backend.dir/config/mongoose/UploadFile.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/UploadFile.cpp > CMakeFiles/backend.dir/config/mongoose/UploadFile.cpp.i
+
+CMakeFiles/backend.dir/config/mongoose/UploadFile.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/backend.dir/config/mongoose/UploadFile.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/UploadFile.cpp -o CMakeFiles/backend.dir/config/mongoose/UploadFile.cpp.s
+
+CMakeFiles/backend.dir/config/mongoose/Utils.cpp.o: CMakeFiles/backend.dir/flags.make
+CMakeFiles/backend.dir/config/mongoose/Utils.cpp.o: ../config/mongoose/Utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tyler/PersonalProjects/business-essentials/backend/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/backend.dir/config/mongoose/Utils.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/backend.dir/config/mongoose/Utils.cpp.o -c /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Utils.cpp
+
+CMakeFiles/backend.dir/config/mongoose/Utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/backend.dir/config/mongoose/Utils.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Utils.cpp > CMakeFiles/backend.dir/config/mongoose/Utils.cpp.i
+
+CMakeFiles/backend.dir/config/mongoose/Utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/backend.dir/config/mongoose/Utils.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Utils.cpp -o CMakeFiles/backend.dir/config/mongoose/Utils.cpp.s
+
+CMakeFiles/backend.dir/config/mongoose/WebController.cpp.o: CMakeFiles/backend.dir/flags.make
+CMakeFiles/backend.dir/config/mongoose/WebController.cpp.o: ../config/mongoose/WebController.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tyler/PersonalProjects/business-essentials/backend/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/backend.dir/config/mongoose/WebController.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/backend.dir/config/mongoose/WebController.cpp.o -c /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/WebController.cpp
+
+CMakeFiles/backend.dir/config/mongoose/WebController.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/backend.dir/config/mongoose/WebController.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/WebController.cpp > CMakeFiles/backend.dir/config/mongoose/WebController.cpp.i
+
+CMakeFiles/backend.dir/config/mongoose/WebController.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/backend.dir/config/mongoose/WebController.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/WebController.cpp -o CMakeFiles/backend.dir/config/mongoose/WebController.cpp.s
+
+CMakeFiles/backend.dir/config/mongoose/WebSocket.cpp.o: CMakeFiles/backend.dir/flags.make
+CMakeFiles/backend.dir/config/mongoose/WebSocket.cpp.o: ../config/mongoose/WebSocket.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tyler/PersonalProjects/business-essentials/backend/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/backend.dir/config/mongoose/WebSocket.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/backend.dir/config/mongoose/WebSocket.cpp.o -c /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/WebSocket.cpp
+
+CMakeFiles/backend.dir/config/mongoose/WebSocket.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/backend.dir/config/mongoose/WebSocket.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/WebSocket.cpp > CMakeFiles/backend.dir/config/mongoose/WebSocket.cpp.i
+
+CMakeFiles/backend.dir/config/mongoose/WebSocket.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/backend.dir/config/mongoose/WebSocket.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/WebSocket.cpp -o CMakeFiles/backend.dir/config/mongoose/WebSocket.cpp.s
+
+CMakeFiles/backend.dir/config/mongoose/WebSockets.cpp.o: CMakeFiles/backend.dir/flags.make
+CMakeFiles/backend.dir/config/mongoose/WebSockets.cpp.o: ../config/mongoose/WebSockets.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tyler/PersonalProjects/business-essentials/backend/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/backend.dir/config/mongoose/WebSockets.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/backend.dir/config/mongoose/WebSockets.cpp.o -c /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/WebSockets.cpp
+
+CMakeFiles/backend.dir/config/mongoose/WebSockets.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/backend.dir/config/mongoose/WebSockets.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/WebSockets.cpp > CMakeFiles/backend.dir/config/mongoose/WebSockets.cpp.i
+
+CMakeFiles/backend.dir/config/mongoose/WebSockets.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/backend.dir/config/mongoose/WebSockets.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/WebSockets.cpp -o CMakeFiles/backend.dir/config/mongoose/WebSockets.cpp.s
+
 # Object files for target backend
 backend_OBJECTS = \
-"CMakeFiles/backend.dir/main.cpp.o"
+"CMakeFiles/backend.dir/main.cpp.o" \
+"CMakeFiles/backend.dir/config/mongoose.c.o" \
+"CMakeFiles/backend.dir/config/mongoose/Controller.cpp.o" \
+"CMakeFiles/backend.dir/config/mongoose/JsonController.cpp.o" \
+"CMakeFiles/backend.dir/config/mongoose/JsonResponse.cpp.o" \
+"CMakeFiles/backend.dir/config/mongoose/Mutex.cpp.o" \
+"CMakeFiles/backend.dir/config/mongoose/Request.cpp.o" \
+"CMakeFiles/backend.dir/config/mongoose/Response.cpp.o" \
+"CMakeFiles/backend.dir/config/mongoose/Server.cpp.o" \
+"CMakeFiles/backend.dir/config/mongoose/Session.cpp.o" \
+"CMakeFiles/backend.dir/config/mongoose/Sessions.cpp.o" \
+"CMakeFiles/backend.dir/config/mongoose/StreamResponse.cpp.o" \
+"CMakeFiles/backend.dir/config/mongoose/UploadFile.cpp.o" \
+"CMakeFiles/backend.dir/config/mongoose/Utils.cpp.o" \
+"CMakeFiles/backend.dir/config/mongoose/WebController.cpp.o" \
+"CMakeFiles/backend.dir/config/mongoose/WebSocket.cpp.o" \
+"CMakeFiles/backend.dir/config/mongoose/WebSockets.cpp.o"
 
 # External object files for target backend
 backend_EXTERNAL_OBJECTS =
 
 backend: CMakeFiles/backend.dir/main.cpp.o
+backend: CMakeFiles/backend.dir/config/mongoose.c.o
+backend: CMakeFiles/backend.dir/config/mongoose/Controller.cpp.o
+backend: CMakeFiles/backend.dir/config/mongoose/JsonController.cpp.o
+backend: CMakeFiles/backend.dir/config/mongoose/JsonResponse.cpp.o
+backend: CMakeFiles/backend.dir/config/mongoose/Mutex.cpp.o
+backend: CMakeFiles/backend.dir/config/mongoose/Request.cpp.o
+backend: CMakeFiles/backend.dir/config/mongoose/Response.cpp.o
+backend: CMakeFiles/backend.dir/config/mongoose/Server.cpp.o
+backend: CMakeFiles/backend.dir/config/mongoose/Session.cpp.o
+backend: CMakeFiles/backend.dir/config/mongoose/Sessions.cpp.o
+backend: CMakeFiles/backend.dir/config/mongoose/StreamResponse.cpp.o
+backend: CMakeFiles/backend.dir/config/mongoose/UploadFile.cpp.o
+backend: CMakeFiles/backend.dir/config/mongoose/Utils.cpp.o
+backend: CMakeFiles/backend.dir/config/mongoose/WebController.cpp.o
+backend: CMakeFiles/backend.dir/config/mongoose/WebSocket.cpp.o
+backend: CMakeFiles/backend.dir/config/mongoose/WebSockets.cpp.o
 backend: CMakeFiles/backend.dir/build.make
+backend: ../config/libjsoncpp.a
 backend: CMakeFiles/backend.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/tyler/PersonalProjects/business-essentials/backend/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable backend"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/tyler/PersonalProjects/business-essentials/backend/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable backend"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/backend.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

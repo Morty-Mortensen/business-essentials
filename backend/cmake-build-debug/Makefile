@@ -123,6 +123,438 @@ backend/fast:
 	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/build
 .PHONY : backend/fast
 
+config/mongoose.o: config/mongoose.c.o
+
+.PHONY : config/mongoose.o
+
+# target to build an object file
+config/mongoose.c.o:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose.c.o
+.PHONY : config/mongoose.c.o
+
+config/mongoose.i: config/mongoose.c.i
+
+.PHONY : config/mongoose.i
+
+# target to preprocess a source file
+config/mongoose.c.i:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose.c.i
+.PHONY : config/mongoose.c.i
+
+config/mongoose.s: config/mongoose.c.s
+
+.PHONY : config/mongoose.s
+
+# target to generate assembly for a file
+config/mongoose.c.s:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose.c.s
+.PHONY : config/mongoose.c.s
+
+config/mongoose/Controller.o: config/mongoose/Controller.cpp.o
+
+.PHONY : config/mongoose/Controller.o
+
+# target to build an object file
+config/mongoose/Controller.cpp.o:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/Controller.cpp.o
+.PHONY : config/mongoose/Controller.cpp.o
+
+config/mongoose/Controller.i: config/mongoose/Controller.cpp.i
+
+.PHONY : config/mongoose/Controller.i
+
+# target to preprocess a source file
+config/mongoose/Controller.cpp.i:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/Controller.cpp.i
+.PHONY : config/mongoose/Controller.cpp.i
+
+config/mongoose/Controller.s: config/mongoose/Controller.cpp.s
+
+.PHONY : config/mongoose/Controller.s
+
+# target to generate assembly for a file
+config/mongoose/Controller.cpp.s:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/Controller.cpp.s
+.PHONY : config/mongoose/Controller.cpp.s
+
+config/mongoose/JsonController.o: config/mongoose/JsonController.cpp.o
+
+.PHONY : config/mongoose/JsonController.o
+
+# target to build an object file
+config/mongoose/JsonController.cpp.o:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/JsonController.cpp.o
+.PHONY : config/mongoose/JsonController.cpp.o
+
+config/mongoose/JsonController.i: config/mongoose/JsonController.cpp.i
+
+.PHONY : config/mongoose/JsonController.i
+
+# target to preprocess a source file
+config/mongoose/JsonController.cpp.i:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/JsonController.cpp.i
+.PHONY : config/mongoose/JsonController.cpp.i
+
+config/mongoose/JsonController.s: config/mongoose/JsonController.cpp.s
+
+.PHONY : config/mongoose/JsonController.s
+
+# target to generate assembly for a file
+config/mongoose/JsonController.cpp.s:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/JsonController.cpp.s
+.PHONY : config/mongoose/JsonController.cpp.s
+
+config/mongoose/JsonResponse.o: config/mongoose/JsonResponse.cpp.o
+
+.PHONY : config/mongoose/JsonResponse.o
+
+# target to build an object file
+config/mongoose/JsonResponse.cpp.o:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/JsonResponse.cpp.o
+.PHONY : config/mongoose/JsonResponse.cpp.o
+
+config/mongoose/JsonResponse.i: config/mongoose/JsonResponse.cpp.i
+
+.PHONY : config/mongoose/JsonResponse.i
+
+# target to preprocess a source file
+config/mongoose/JsonResponse.cpp.i:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/JsonResponse.cpp.i
+.PHONY : config/mongoose/JsonResponse.cpp.i
+
+config/mongoose/JsonResponse.s: config/mongoose/JsonResponse.cpp.s
+
+.PHONY : config/mongoose/JsonResponse.s
+
+# target to generate assembly for a file
+config/mongoose/JsonResponse.cpp.s:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/JsonResponse.cpp.s
+.PHONY : config/mongoose/JsonResponse.cpp.s
+
+config/mongoose/Mutex.o: config/mongoose/Mutex.cpp.o
+
+.PHONY : config/mongoose/Mutex.o
+
+# target to build an object file
+config/mongoose/Mutex.cpp.o:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/Mutex.cpp.o
+.PHONY : config/mongoose/Mutex.cpp.o
+
+config/mongoose/Mutex.i: config/mongoose/Mutex.cpp.i
+
+.PHONY : config/mongoose/Mutex.i
+
+# target to preprocess a source file
+config/mongoose/Mutex.cpp.i:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/Mutex.cpp.i
+.PHONY : config/mongoose/Mutex.cpp.i
+
+config/mongoose/Mutex.s: config/mongoose/Mutex.cpp.s
+
+.PHONY : config/mongoose/Mutex.s
+
+# target to generate assembly for a file
+config/mongoose/Mutex.cpp.s:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/Mutex.cpp.s
+.PHONY : config/mongoose/Mutex.cpp.s
+
+config/mongoose/Request.o: config/mongoose/Request.cpp.o
+
+.PHONY : config/mongoose/Request.o
+
+# target to build an object file
+config/mongoose/Request.cpp.o:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/Request.cpp.o
+.PHONY : config/mongoose/Request.cpp.o
+
+config/mongoose/Request.i: config/mongoose/Request.cpp.i
+
+.PHONY : config/mongoose/Request.i
+
+# target to preprocess a source file
+config/mongoose/Request.cpp.i:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/Request.cpp.i
+.PHONY : config/mongoose/Request.cpp.i
+
+config/mongoose/Request.s: config/mongoose/Request.cpp.s
+
+.PHONY : config/mongoose/Request.s
+
+# target to generate assembly for a file
+config/mongoose/Request.cpp.s:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/Request.cpp.s
+.PHONY : config/mongoose/Request.cpp.s
+
+config/mongoose/Response.o: config/mongoose/Response.cpp.o
+
+.PHONY : config/mongoose/Response.o
+
+# target to build an object file
+config/mongoose/Response.cpp.o:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/Response.cpp.o
+.PHONY : config/mongoose/Response.cpp.o
+
+config/mongoose/Response.i: config/mongoose/Response.cpp.i
+
+.PHONY : config/mongoose/Response.i
+
+# target to preprocess a source file
+config/mongoose/Response.cpp.i:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/Response.cpp.i
+.PHONY : config/mongoose/Response.cpp.i
+
+config/mongoose/Response.s: config/mongoose/Response.cpp.s
+
+.PHONY : config/mongoose/Response.s
+
+# target to generate assembly for a file
+config/mongoose/Response.cpp.s:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/Response.cpp.s
+.PHONY : config/mongoose/Response.cpp.s
+
+config/mongoose/Server.o: config/mongoose/Server.cpp.o
+
+.PHONY : config/mongoose/Server.o
+
+# target to build an object file
+config/mongoose/Server.cpp.o:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/Server.cpp.o
+.PHONY : config/mongoose/Server.cpp.o
+
+config/mongoose/Server.i: config/mongoose/Server.cpp.i
+
+.PHONY : config/mongoose/Server.i
+
+# target to preprocess a source file
+config/mongoose/Server.cpp.i:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/Server.cpp.i
+.PHONY : config/mongoose/Server.cpp.i
+
+config/mongoose/Server.s: config/mongoose/Server.cpp.s
+
+.PHONY : config/mongoose/Server.s
+
+# target to generate assembly for a file
+config/mongoose/Server.cpp.s:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/Server.cpp.s
+.PHONY : config/mongoose/Server.cpp.s
+
+config/mongoose/Session.o: config/mongoose/Session.cpp.o
+
+.PHONY : config/mongoose/Session.o
+
+# target to build an object file
+config/mongoose/Session.cpp.o:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/Session.cpp.o
+.PHONY : config/mongoose/Session.cpp.o
+
+config/mongoose/Session.i: config/mongoose/Session.cpp.i
+
+.PHONY : config/mongoose/Session.i
+
+# target to preprocess a source file
+config/mongoose/Session.cpp.i:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/Session.cpp.i
+.PHONY : config/mongoose/Session.cpp.i
+
+config/mongoose/Session.s: config/mongoose/Session.cpp.s
+
+.PHONY : config/mongoose/Session.s
+
+# target to generate assembly for a file
+config/mongoose/Session.cpp.s:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/Session.cpp.s
+.PHONY : config/mongoose/Session.cpp.s
+
+config/mongoose/Sessions.o: config/mongoose/Sessions.cpp.o
+
+.PHONY : config/mongoose/Sessions.o
+
+# target to build an object file
+config/mongoose/Sessions.cpp.o:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/Sessions.cpp.o
+.PHONY : config/mongoose/Sessions.cpp.o
+
+config/mongoose/Sessions.i: config/mongoose/Sessions.cpp.i
+
+.PHONY : config/mongoose/Sessions.i
+
+# target to preprocess a source file
+config/mongoose/Sessions.cpp.i:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/Sessions.cpp.i
+.PHONY : config/mongoose/Sessions.cpp.i
+
+config/mongoose/Sessions.s: config/mongoose/Sessions.cpp.s
+
+.PHONY : config/mongoose/Sessions.s
+
+# target to generate assembly for a file
+config/mongoose/Sessions.cpp.s:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/Sessions.cpp.s
+.PHONY : config/mongoose/Sessions.cpp.s
+
+config/mongoose/StreamResponse.o: config/mongoose/StreamResponse.cpp.o
+
+.PHONY : config/mongoose/StreamResponse.o
+
+# target to build an object file
+config/mongoose/StreamResponse.cpp.o:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/StreamResponse.cpp.o
+.PHONY : config/mongoose/StreamResponse.cpp.o
+
+config/mongoose/StreamResponse.i: config/mongoose/StreamResponse.cpp.i
+
+.PHONY : config/mongoose/StreamResponse.i
+
+# target to preprocess a source file
+config/mongoose/StreamResponse.cpp.i:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/StreamResponse.cpp.i
+.PHONY : config/mongoose/StreamResponse.cpp.i
+
+config/mongoose/StreamResponse.s: config/mongoose/StreamResponse.cpp.s
+
+.PHONY : config/mongoose/StreamResponse.s
+
+# target to generate assembly for a file
+config/mongoose/StreamResponse.cpp.s:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/StreamResponse.cpp.s
+.PHONY : config/mongoose/StreamResponse.cpp.s
+
+config/mongoose/UploadFile.o: config/mongoose/UploadFile.cpp.o
+
+.PHONY : config/mongoose/UploadFile.o
+
+# target to build an object file
+config/mongoose/UploadFile.cpp.o:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/UploadFile.cpp.o
+.PHONY : config/mongoose/UploadFile.cpp.o
+
+config/mongoose/UploadFile.i: config/mongoose/UploadFile.cpp.i
+
+.PHONY : config/mongoose/UploadFile.i
+
+# target to preprocess a source file
+config/mongoose/UploadFile.cpp.i:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/UploadFile.cpp.i
+.PHONY : config/mongoose/UploadFile.cpp.i
+
+config/mongoose/UploadFile.s: config/mongoose/UploadFile.cpp.s
+
+.PHONY : config/mongoose/UploadFile.s
+
+# target to generate assembly for a file
+config/mongoose/UploadFile.cpp.s:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/UploadFile.cpp.s
+.PHONY : config/mongoose/UploadFile.cpp.s
+
+config/mongoose/Utils.o: config/mongoose/Utils.cpp.o
+
+.PHONY : config/mongoose/Utils.o
+
+# target to build an object file
+config/mongoose/Utils.cpp.o:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/Utils.cpp.o
+.PHONY : config/mongoose/Utils.cpp.o
+
+config/mongoose/Utils.i: config/mongoose/Utils.cpp.i
+
+.PHONY : config/mongoose/Utils.i
+
+# target to preprocess a source file
+config/mongoose/Utils.cpp.i:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/Utils.cpp.i
+.PHONY : config/mongoose/Utils.cpp.i
+
+config/mongoose/Utils.s: config/mongoose/Utils.cpp.s
+
+.PHONY : config/mongoose/Utils.s
+
+# target to generate assembly for a file
+config/mongoose/Utils.cpp.s:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/Utils.cpp.s
+.PHONY : config/mongoose/Utils.cpp.s
+
+config/mongoose/WebController.o: config/mongoose/WebController.cpp.o
+
+.PHONY : config/mongoose/WebController.o
+
+# target to build an object file
+config/mongoose/WebController.cpp.o:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/WebController.cpp.o
+.PHONY : config/mongoose/WebController.cpp.o
+
+config/mongoose/WebController.i: config/mongoose/WebController.cpp.i
+
+.PHONY : config/mongoose/WebController.i
+
+# target to preprocess a source file
+config/mongoose/WebController.cpp.i:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/WebController.cpp.i
+.PHONY : config/mongoose/WebController.cpp.i
+
+config/mongoose/WebController.s: config/mongoose/WebController.cpp.s
+
+.PHONY : config/mongoose/WebController.s
+
+# target to generate assembly for a file
+config/mongoose/WebController.cpp.s:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/WebController.cpp.s
+.PHONY : config/mongoose/WebController.cpp.s
+
+config/mongoose/WebSocket.o: config/mongoose/WebSocket.cpp.o
+
+.PHONY : config/mongoose/WebSocket.o
+
+# target to build an object file
+config/mongoose/WebSocket.cpp.o:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/WebSocket.cpp.o
+.PHONY : config/mongoose/WebSocket.cpp.o
+
+config/mongoose/WebSocket.i: config/mongoose/WebSocket.cpp.i
+
+.PHONY : config/mongoose/WebSocket.i
+
+# target to preprocess a source file
+config/mongoose/WebSocket.cpp.i:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/WebSocket.cpp.i
+.PHONY : config/mongoose/WebSocket.cpp.i
+
+config/mongoose/WebSocket.s: config/mongoose/WebSocket.cpp.s
+
+.PHONY : config/mongoose/WebSocket.s
+
+# target to generate assembly for a file
+config/mongoose/WebSocket.cpp.s:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/WebSocket.cpp.s
+.PHONY : config/mongoose/WebSocket.cpp.s
+
+config/mongoose/WebSockets.o: config/mongoose/WebSockets.cpp.o
+
+.PHONY : config/mongoose/WebSockets.o
+
+# target to build an object file
+config/mongoose/WebSockets.cpp.o:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/WebSockets.cpp.o
+.PHONY : config/mongoose/WebSockets.cpp.o
+
+config/mongoose/WebSockets.i: config/mongoose/WebSockets.cpp.i
+
+.PHONY : config/mongoose/WebSockets.i
+
+# target to preprocess a source file
+config/mongoose/WebSockets.cpp.i:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/WebSockets.cpp.i
+.PHONY : config/mongoose/WebSockets.cpp.i
+
+config/mongoose/WebSockets.s: config/mongoose/WebSockets.cpp.s
+
+.PHONY : config/mongoose/WebSockets.s
+
+# target to generate assembly for a file
+config/mongoose/WebSockets.cpp.s:
+	$(MAKE) -f CMakeFiles/backend.dir/build.make CMakeFiles/backend.dir/config/mongoose/WebSockets.cpp.s
+.PHONY : config/mongoose/WebSockets.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +591,54 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... backend"
+	@echo "... config/mongoose.o"
+	@echo "... config/mongoose.i"
+	@echo "... config/mongoose.s"
+	@echo "... config/mongoose/Controller.o"
+	@echo "... config/mongoose/Controller.i"
+	@echo "... config/mongoose/Controller.s"
+	@echo "... config/mongoose/JsonController.o"
+	@echo "... config/mongoose/JsonController.i"
+	@echo "... config/mongoose/JsonController.s"
+	@echo "... config/mongoose/JsonResponse.o"
+	@echo "... config/mongoose/JsonResponse.i"
+	@echo "... config/mongoose/JsonResponse.s"
+	@echo "... config/mongoose/Mutex.o"
+	@echo "... config/mongoose/Mutex.i"
+	@echo "... config/mongoose/Mutex.s"
+	@echo "... config/mongoose/Request.o"
+	@echo "... config/mongoose/Request.i"
+	@echo "... config/mongoose/Request.s"
+	@echo "... config/mongoose/Response.o"
+	@echo "... config/mongoose/Response.i"
+	@echo "... config/mongoose/Response.s"
+	@echo "... config/mongoose/Server.o"
+	@echo "... config/mongoose/Server.i"
+	@echo "... config/mongoose/Server.s"
+	@echo "... config/mongoose/Session.o"
+	@echo "... config/mongoose/Session.i"
+	@echo "... config/mongoose/Session.s"
+	@echo "... config/mongoose/Sessions.o"
+	@echo "... config/mongoose/Sessions.i"
+	@echo "... config/mongoose/Sessions.s"
+	@echo "... config/mongoose/StreamResponse.o"
+	@echo "... config/mongoose/StreamResponse.i"
+	@echo "... config/mongoose/StreamResponse.s"
+	@echo "... config/mongoose/UploadFile.o"
+	@echo "... config/mongoose/UploadFile.i"
+	@echo "... config/mongoose/UploadFile.s"
+	@echo "... config/mongoose/Utils.o"
+	@echo "... config/mongoose/Utils.i"
+	@echo "... config/mongoose/Utils.s"
+	@echo "... config/mongoose/WebController.o"
+	@echo "... config/mongoose/WebController.i"
+	@echo "... config/mongoose/WebController.s"
+	@echo "... config/mongoose/WebSocket.o"
+	@echo "... config/mongoose/WebSocket.i"
+	@echo "... config/mongoose/WebSocket.s"
+	@echo "... config/mongoose/WebSockets.o"
+	@echo "... config/mongoose/WebSockets.i"
+	@echo "... config/mongoose/WebSockets.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

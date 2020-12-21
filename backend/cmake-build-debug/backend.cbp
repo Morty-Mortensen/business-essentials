@@ -80,6 +80,105 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose.c">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose.h">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Controller.cpp">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Controller.h">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/JsonController.cpp">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/JsonController.h">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/JsonResponse.cpp">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/JsonResponse.h">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Mutex.cpp">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Mutex.h">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Request.cpp">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Request.h">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/RequestHandler.h">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Response.cpp">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Response.h">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Server.cpp">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Server.h">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Session.cpp">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Session.h">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Sessions.cpp">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Sessions.h">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/StreamResponse.cpp">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/StreamResponse.h">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/UploadFile.cpp">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/UploadFile.h">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Utils.cpp">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/Utils.h">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/WebController.cpp">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/WebController.h">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/WebSocket.cpp">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/WebSocket.h">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/WebSockets.cpp">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/WebSockets.h">
+			<Option target="backend"/>
+		</Unit>
 		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/main.cpp">
 			<Option target="backend"/>
 		</Unit>

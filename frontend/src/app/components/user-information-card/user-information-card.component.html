@@ -1,15 +1,19 @@
-<form class="user-info-container" #form>
+<form class="user-info-container" [formGroup]="form">
     <h1 class="user-info-title">{{title}}</h1>
     <div class="user-info-items-container">
         <input *ngIf="firstNameSwitch" formControlName="firstName"  class="user-info-text-field" type="text" placeholder="First Name"/>
         <input *ngIf="lastNameSwitch" formControlName="lastName" class="user-info-text-field" type="text" placeholder="Last Name"/>
-        <input *ngIf="emailSwitch" formControlName="email" class="user-info-text-field" type="text" placeholder="Email"/>
+        <input *ngIf="emailSwitch" formControlName="email" type="email" class="user-info-text-field" type="text" placeholder="Email"/>
         <input *ngIf="passwordSwitch" formControlName="password" class="user-info-text-field" type="password" placeholder="Password"/>
         <div *ngIf="uploadPhotoSwitch" class="user-info-upload-image">
             <h3 class="user-info-forgot-password" formControlName="imageBase64">Upload Profile Image</h3>
         </div>
-        <button *ngif="login" class="user-info-button-field" type="submit" (click)="loginUser()">Login</button>
-        <button *ngif="register" class="user-info-button-field" type="submit" (click)="registerUser()">Register</button>
+        <ng-container *ngIf="login" >
+            <button  class="user-info-button-field" type="button" (click)="loginUser()">Login</button>
+        </ng-container>
+        <ng-container *ngIf="register">
+            <button class="user-info-button-field" type="button" (click)="registerUser()">Register</button>
+        </ng-container>
     </div>
     <div *ngIf="forgotPasswordSwitch" class="user-info-forgot-password-container">
         <h3 class="user-info-forgot-password">Forgot Password?</h3>

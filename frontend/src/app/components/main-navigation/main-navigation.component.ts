@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import {Component, OnInit, ChangeDetectorRef, Output, EventEmitter} from '@angular/core';
 import { faAngleDown, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import {Route, Router} from "@angular/router";
 import {RouteDisplay} from "../../domain/RouteDisplay";
@@ -24,69 +24,30 @@ export class MainNavigationComponent implements OnInit {
   private firstChildKey : number = null;
   private secondChildKey : number = null;
 
+  public routesWithoutException : Array<RouteDisplay> = []
 
 
-  constructor(private route: Router, public titleCasePipe: TitleCasePipe)
+
+  constructor(private route: Router, public titleCasePipe: TitleCasePipe) {}
+
+  private getAllRoutesWithoutException(currUrl, children: Route[])
   {
-    if ( this.routes.size === 0 )
+    for ( let i = 0; i < children.length; i++ )
     {
-      this.getAllRoutes(this.parentId,'/', this.route.config, 0);
+      let displayLabel = children[i].path.substr(children[i].path.lastIndexOf('/') + 1, children[i].path.length).replace(/-/g, ' ');
+
+      if ( displayLabel !== '' )
+      {
+        this.routesWithoutException.push(new RouteDisplay(null, displayLabel, currUrl + children[i].path));
+      }
+
+      if ( children[i].children !== undefined )
+      {
+        this.getAllRoutesWithoutException(currUrl + children[i].path + '/', children[i].children);
+      }
     }
-
-    console.log(this.routes);
   }
 
-  public getMainKey(key : number)
-  {
-    if ( this.mainChildren.length && this.mainKey === key )
-    {
-      this.mainChildren = [];
-    }
-    else
-    {
-      this.mainKey = key;
-      this.mainChildren = this.routes.get(key);
-    }
-
-
-    this.firstChildren = [];
-    this.secondChildren = [];
-  }
-
-  public getFirstChildKey(key : number)
-  {
-
-    if ( this.firstChildren.length && this.firstChildKey === key )
-    {
-      this.firstChildren = [];
-    }
-    else
-    {
-      this.firstChildKey = key;
-      this.firstChildren = this.routes.get(key);
-    }
-
-    this.secondChildren = [];
-  }
-
-  public getSecondChildKey(key : number)
-  {
-    this.secondChildren = this.routes.get(key);
-  }
-
-  public clearRoutes()
-  {
-    this.mainChildren = [];
-    this.firstChildren = [];
-    this.secondChildren = [];
-  }
-
-  private isValidRoute(path : string)
-  {
-    return !path.includes("login")
-        && !path.includes("register")
-        && path !== ''
-  }
 
   private getAllRoutes(parentID : number, currUrl : string, children: Route[], level : number) : void
   {
@@ -146,8 +107,64 @@ export class MainNavigationComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
+  private isValidRoute(path : string)
+  {
+    return !path.includes("login")
+        && !path.includes("register")
+        && path !== ''
+  }
 
+  public getMainKey(key : number)
+  {
+    if ( this.mainChildren.length && this.mainKey === key )
+    {
+      this.mainChildren = [];
+    }
+    else
+    {
+      this.mainKey = key;
+      this.mainChildren = this.routes.get(key);
+    }
+
+
+    this.firstChildren = [];
+    this.secondChildren = [];
+  }
+
+  public getFirstChildKey(key : number)
+  {
+
+    if ( this.firstChildren.length && this.firstChildKey === key )
+    {
+      this.firstChildren = [];
+    }
+    else
+    {
+      this.firstChildKey = key;
+      this.firstChildren = this.routes.get(key);
+    }
+
+    this.secondChildren = [];
+  }
+
+  public getSecondChildKey(key : number)
+  {
+    this.secondChildren = this.routes.get(key);
+  }
+
+  public clearRoutes()
+  {
+    this.mainChildren = [];
+    this.firstChildren = [];
+    this.secondChildren = [];
+  }
+
+  ngOnInit(): void {
+    if ( this.routes.size === 0 )
+    {
+      this.getAllRoutes(this.parentId,'/', this.route.config, 0);
+      this.getAllRoutesWithoutException('/', this.route.config);
+    }
   }
 
 }

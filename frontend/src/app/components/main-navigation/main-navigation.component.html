@@ -1,68 +1,78 @@
 <div class="main-navigation-container">
     <div class="main-navigation-links-container">
-        <h4>Accounting <fa-icon class="main-navigation-down-arrow-icon" [icon]="faAngleDown"></fa-icon></h4>
-        <h4>Marketing <fa-icon class="main-navigation-down-arrow-icon" [icon]="faAngleDown"></fa-icon></h4>
-        <h4>Finance <fa-icon class="main-navigation-down-arrow-icon" [icon]="faAngleDown"></fa-icon></h4>
+        <h4 *ngFor="let key of mainRoutes.keys()">
+            <a routerLink="{{mainRoutes.get(key).pathName}}" (click)="clearRoutes()" class="route-decoration">
+                {{titleCasePipe.transform(mainRoutes.get(key).displayName)}}
+            </a>
+
+            <fa-icon (click)="getMainKey(mainRoutes.get(key).id)" class="main-navigation-down-arrow-icon" [icon]="faAngleDown"></fa-icon>
+        </h4>
     </div>
 </div>
+<div class="routes-container">
+    <div class="sub-routes-container">
+        <div *ngIf="mainChildren.length">
+            <div *ngFor="let child of mainChildren">
+                <div *ngIf="child.id !== null" class="route-item">
+                    <a routerLink="{{child.pathName}}" (click)="clearRoutes()" class="route-decoration">
+                        {{titleCasePipe.transform(child.displayName)}}
+                    </a>
+                    <fa-icon (click)="getFirstChildKey(child.id)" class="main-navigation-down-arrow-icon" [icon]="faAngleDown"></fa-icon>
+                </div>
 
-<h1>HELLO</h1>
-<div>
-    <ul *ngFor="let key of mainRoutes.keys()">
-        <li (click)="getMainKey(mainRoutes.get(key).id)">
-            {{mainRoutes.get(key).displayName}}
-        </li>
-    </ul>
-
-    <hr/>
-
-    <div *ngIf="mainChildren.length">
-        <ul *ngFor="let child of mainChildren">
-            <li *ngIf="child.id !== null" (click)="getFirstChildKey(child.id)">
-                HAS CHILDREN: {{child.displayName}}
-            </li>
-            <li *ngIf="child.id === null">
-                {{child.displayName}}
-            </li>
-        </ul>
+                <div *ngIf="child.id === null" class="route-item">
+                    <a routerLink="{{child.pathName}}" (click)="clearRoutes()" class="route-decoration">
+                        {{titleCasePipe.transform(child.displayName)}}
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-
-
-    <hr/>
 
     <div *ngIf="firstChildren.length">
-        <ul *ngFor="let child of firstChildren">
-            <li *ngIf="child.id !== null" (click)="getSecondChildKey(child.id)">
-                HAS CHILDREN: {{child.displayName}}
-            </li>
-            <li *ngIf="child.id === null">
-                {{child.displayName}}
-            </li>
-        </ul>
+        <fa-icon class="sub-route-transition-arrow" [icon]="faAngleRight"></fa-icon>
     </div>
 
+    <div class="sub-routes-container">
+        <div *ngIf="firstChildren.length">
+            <div *ngFor="let child of firstChildren">
+                <div *ngIf="child.id !== null" class="route-item">
+                    <a routerLink="{{child.pathName}}" (click)="clearRoutes()" class="route-decoration">
+                        {{titleCasePipe.transform(child.displayName)}}
+                    </a>
+                    <fa-icon (click)="getSecondChildKey(child.id)" class="main-navigation-down-arrow-icon" [icon]="faAngleDown"></fa-icon>
+                </div>
 
-    <hr/>
+                <div *ngIf="child.id === null" class="route-item">
+                    <a routerLink="{{child.pathName}}" (click)="clearRoutes()" class="route-decoration">
+                        {{titleCasePipe.transform(child.displayName)}}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <ul *ngFor="let child of secondChildren">
-        <li *ngIf="child.id !== null" (click)="getSecondChildKey(child.id)">
-            HAS CHILDREN: {{child.displayName}}
-        </li>
-        <li *ngIf="child.id === null">
-            {{child.displayName}}
-        </li>
-    </ul>
+    <div *ngIf="secondChildren.length">
+        <fa-icon class="sub-route-transition-arrow" [icon]="faAngleRight"></fa-icon>
+    </div>
 
-    <hr/>
-<!--    <div *ngFor="let currRoute of route">-->
-<!--        {{currRoute.displayName}}-->
-<!--    </div>-->
-<!--    <div *ngFor="let currRoute of route">-->
-<!--        <ul>-->
-<!--            <li>Path: {{currRoute.displayName}} - Route: {{currRoute.pathName}}</li>-->
-<!--        </ul>-->
-<!--    </div>-->
+    <div class="sub-routes-container">
+        <div *ngIf="secondChildren.length">
+            <div *ngFor="let child of secondChildren">
+                <div *ngIf="child.id !== null" class="route-item">
+                    <a routerLink="{{child.pathName}}" class="route-decoration">
+                        {{titleCasePipe.transform(child.displayName)}}
+                    </a>
+                    <fa-icon (click)="getSecondChildKey(child.id)" class="main-navigation-down-arrow-icon" [icon]="faAngleDown"></fa-icon>
+                </div>
+
+                <div *ngIf="child.id === null" class="route-item">
+                    <a routerLink="{{child.pathName}}" class="route-decoration">
+                        {{titleCasePipe.transform(child.displayName)}}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>
-
-<!--<div *ngIf="routes.size == 0">SAD FACE</div>-->

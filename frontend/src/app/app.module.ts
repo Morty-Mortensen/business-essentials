@@ -20,6 +20,7 @@ import { LoginComponent } from './views/login/login.component';
 import { UserInformationCardComponent } from './components/user-information-card/user-information-card.component';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import {TitleCasePipe} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -47,7 +48,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     ReactiveFormsModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [TitleCasePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

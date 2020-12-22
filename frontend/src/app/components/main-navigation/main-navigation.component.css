@@ -21,3 +21,41 @@
 {
     color: #FFC541;
 }
+
+.route-decoration
+{
+    text-decoration: none;
+    color: black;
+}
+
+.route-item
+{
+    background-color: #FCFBFC;
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.sub-routes-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.routes-container
+{
+    display: flex; flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    background-color: #FCFBFC;
+}
+
+.sub-route-transition-arrow
+{
+    font-size: 80px;
+    position: relative;
+    top: 40px;
+}

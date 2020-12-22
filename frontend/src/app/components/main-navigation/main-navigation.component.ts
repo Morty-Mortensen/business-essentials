@@ -1,7 +1,8 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import {Route, Router} from "@angular/router";
 import {RouteDisplay} from "../../domain/RouteDisplay";
+import {TitleCasePipe} from "@angular/common";
 
 @Component({
   selector: 'app-main-navigation',
@@ -10,6 +11,7 @@ import {RouteDisplay} from "../../domain/RouteDisplay";
 })
 export class MainNavigationComponent implements OnInit {
   faAngleDown = faAngleDown;
+  faAngleRight = faAngleRight;
   routes : Map<Number, Array<RouteDisplay>> = new Map();
   public mainRoutes : Map<Number, RouteDisplay> = new Map();
   private parentId : number = 0;
@@ -18,8 +20,13 @@ export class MainNavigationComponent implements OnInit {
   public firstChildren : Array<RouteDisplay> = [];
   public secondChildren : Array<RouteDisplay> = [];
 
+  private mainKey : number = null;
+  private firstChildKey : number = null;
+  private secondChildKey : number = null;
 
-  constructor(private route: Router)
+
+
+  constructor(private route: Router, public titleCasePipe: TitleCasePipe)
   {
     if ( this.routes.size === 0 )
     {
@@ -31,12 +38,13 @@ export class MainNavigationComponent implements OnInit {
 
   public getMainKey(key : number)
   {
-    if ( this.mainChildren.length )
+    if ( this.mainChildren.length && this.mainKey === key )
     {
       this.mainChildren = [];
     }
     else
     {
+      this.mainKey = key;
       this.mainChildren = this.routes.get(key);
     }
 
@@ -47,12 +55,14 @@ export class MainNavigationComponent implements OnInit {
 
   public getFirstChildKey(key : number)
   {
-    if ( this.firstChildren.length )
+
+    if ( this.firstChildren.length && this.firstChildKey === key )
     {
       this.firstChildren = [];
     }
     else
     {
+      this.firstChildKey = key;
       this.firstChildren = this.routes.get(key);
     }
 
@@ -62,6 +72,13 @@ export class MainNavigationComponent implements OnInit {
   public getSecondChildKey(key : number)
   {
     this.secondChildren = this.routes.get(key);
+  }
+
+  public clearRoutes()
+  {
+    this.mainChildren = [];
+    this.firstChildren = [];
+    this.secondChildren = [];
   }
 
   private isValidRoute(path : string)

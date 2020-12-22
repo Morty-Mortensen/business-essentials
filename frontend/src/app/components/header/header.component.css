@@ -87,11 +87,12 @@
 
 .header-logo-container
 {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    position: absolute;
-    left: 450px;
-    top: 0;
+    /*left: 450px;*/
+    /*top: 0;*/
 }
 
 @media (max-width: 950px)
@@ -136,8 +137,8 @@
 
 .header-logo
 {
-    width: 200px;
-    height: 160px;
+    width: 150px;
+    height: 100px;
 }
 
 .header-logo-media
@@ -150,7 +151,6 @@
 {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
 }
 
 .header-sign-in-links

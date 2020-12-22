@@ -45,7 +45,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     HttpClientModule,
     CommonModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

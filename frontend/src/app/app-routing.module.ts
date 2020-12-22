@@ -20,13 +20,31 @@ const routes: Routes =
         path: 'login', component: LoginComponent
       },
       {
-        path: 'accounting', component: AccountingComponent
+        path: 'accounting', component: AccountingComponent,
+          children: [
+              { path: 'why-accounting', component: HomeComponent,
+              children: [
+                  { path: 'test-accounting-third-tire', component: HomeComponent }
+              ]},
+              { path: 'accounting-business-essentials', component: HomeComponent },
+              { path: 'accounting-blog', component: HomeComponent },
+          ]
       },
       {
-        path: 'marketing', component: MarketingComponent
+        path: 'marketing', component: MarketingComponent,
+          children: [
+              { path: 'why-marketing', component: HomeComponent },
+              { path: 'marketing-business-essentials', component: HomeComponent },
+              { path: 'marketing-blog', component: HomeComponent },
+          ]
       },
       {
-        path: 'finance', component: FinanceComponent
+        path: 'finance', component: FinanceComponent,
+          children: [
+              { path: 'why-finance', component: HomeComponent },
+              { path: 'finance-business-essentials', component: HomeComponent },
+              { path: 'finance-blog', component: HomeComponent },
+          ]
       },
     ];
 

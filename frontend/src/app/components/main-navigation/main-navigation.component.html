@@ -5,3 +5,64 @@
         <h4>Finance <fa-icon class="main-navigation-down-arrow-icon" [icon]="faAngleDown"></fa-icon></h4>
     </div>
 </div>
+
+<h1>HELLO</h1>
+<div>
+    <ul *ngFor="let key of mainRoutes.keys()">
+        <li (click)="getMainKey(mainRoutes.get(key).id)">
+            {{mainRoutes.get(key).displayName}}
+        </li>
+    </ul>
+
+    <hr/>
+
+    <div *ngIf="mainChildren.length">
+        <ul *ngFor="let child of mainChildren">
+            <li *ngIf="child.id !== null" (click)="getFirstChildKey(child.id)">
+                HAS CHILDREN: {{child.displayName}}
+            </li>
+            <li *ngIf="child.id === null">
+                {{child.displayName}}
+            </li>
+        </ul>
+    </div>
+
+
+    <hr/>
+
+    <div *ngIf="firstChildren.length">
+        <ul *ngFor="let child of firstChildren">
+            <li *ngIf="child.id !== null" (click)="getSecondChildKey(child.id)">
+                HAS CHILDREN: {{child.displayName}}
+            </li>
+            <li *ngIf="child.id === null">
+                {{child.displayName}}
+            </li>
+        </ul>
+    </div>
+
+
+    <hr/>
+
+    <ul *ngFor="let child of secondChildren">
+        <li *ngIf="child.id !== null" (click)="getSecondChildKey(child.id)">
+            HAS CHILDREN: {{child.displayName}}
+        </li>
+        <li *ngIf="child.id === null">
+            {{child.displayName}}
+        </li>
+    </ul>
+
+    <hr/>
+<!--    <div *ngFor="let currRoute of route">-->
+<!--        {{currRoute.displayName}}-->
+<!--    </div>-->
+<!--    <div *ngFor="let currRoute of route">-->
+<!--        <ul>-->
+<!--            <li>Path: {{currRoute.displayName}} - Route: {{currRoute.pathName}}</li>-->
+<!--        </ul>-->
+<!--    </div>-->
+
+</div>
+
+<!--<div *ngIf="routes.size == 0">SAD FACE</div>-->

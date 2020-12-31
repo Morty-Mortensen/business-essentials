@@ -6,13 +6,13 @@
         <input *ngIf="emailSwitch" formControlName="email" type="email" class="user-info-text-field" type="text" placeholder="Email"/>
         <input *ngIf="passwordSwitch" formControlName="password" class="user-info-text-field" type="password" placeholder="Password"/>
         <div *ngIf="uploadPhotoSwitch" class="user-info-upload-image">
-            <h3 class="user-info-forgot-password" formControlName="imageBase64">Upload Profile Image</h3>
+            <h3> <input class="user-info-forgot-password"  formControlName="imageBase64" placeholder="Upload Profile Image"> </h3>
         </div>
         <ng-container *ngIf="login" >
-            <button  class="user-info-button-field" type="button" (click)="loginUser()">Login</button>
+            <button [class.user-info-button-field-disabled]="!isValidLogin()" [class.user-info-button-field-enabled]="isValidLogin()" class="user-info-button-field-disabled" type="button" [disabled]="!isValidLogin()" (click)="loginUser()">Login</button>
         </ng-container>
         <ng-container *ngIf="register">
-            <button class="user-info-button-field" type="button" (click)="registerUser()">Register</button>
+            <button [class.user-info-button-field-disabled]="!isValidRegister()" [class.user-info-button-field-enabled]="isValidRegister()" type="button" [disabled]="!isValidRegister()" (click)="registerUser()">Register</button>
         </ng-container>
     </div>
     <div *ngIf="forgotPasswordSwitch" class="user-info-forgot-password-container">

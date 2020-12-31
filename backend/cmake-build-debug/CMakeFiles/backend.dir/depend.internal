@@ -139,3 +139,8 @@ CMakeFiles/backend.dir/main.cpp.o
  /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/WebSocket.h
  /Users/tyler/PersonalProjects/business-essentials/backend/config/mongoose/WebSockets.h
  /Users/tyler/PersonalProjects/business-essentials/backend/main.cpp
+ /Users/tyler/PersonalProjects/business-essentials/backend/net/IJsonDeserializer.h
+ /Users/tyler/PersonalProjects/business-essentials/backend/net/IJsonSerializer.h
+ /Users/tyler/PersonalProjects/business-essentials/backend/net/StaticJsonSerializer.h
+ /Users/tyler/PersonalProjects/business-essentials/backend/net/request/LoginRequest.h
+ /Users/tyler/PersonalProjects/business-essentials/backend/net/response/LoginResponse.h

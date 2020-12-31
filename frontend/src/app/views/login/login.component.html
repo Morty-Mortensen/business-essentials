@@ -4,5 +4,13 @@
     [login]="true"
     [emailSwitch]="true"
     [passwordSwitch]="true"
-    [forgotPasswordSwitch]="true"></app-user-information-card>
+    [forgotPasswordSwitch]="true"
+    (loginRequest)="login($event)" ></app-user-information-card>
+
+    <div style="margin-top: 20px">
+        <h1 *ngIf="saving">Logging in...</h1>
+        <h1 style="color: #43E606" *ngIf="success">Successfully Logged In!</h1>
+        <h1 style="color: #DE0005" *ngIf="errorMessage">{{errorMessage}}</h1>
+    </div>
+
 </div>

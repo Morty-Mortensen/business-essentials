@@ -4,21 +4,43 @@ import {Observable} from "rxjs";
 import {LoginResponse} from "../response/LoginResponse";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 
 
 export class CommunicatorService {
 
+
   private http : HttpClient = new HttpClient(new HttpXhrBackend({ build: () => new XMLHttpRequest() }))
+  public observer : Observer;
 
-
-  constructor(@Inject(String) private baseUrl : string)
+  constructor(@Inject(String) private baseUrl : string, observer : Observer)
   {
-
+    this.observer = observer;
   }
 
-  public doPost( urlPath : string, requestInfo : any, httpHeaders : HttpHeaders, returnType: any ) : any // Response Obj
+  public static addQueryToString(header : HttpHeaders) : string
+  {
+    let urlPath : string = ""
+    let headerKeys = header.keys();
+    urlPath += "?"
+    for ( let i = 0; i < headerKeys.length; i++ )
+    {
+      let value = header.get(headerKeys[i]);
+
+      if ( i != (headerKeys.length - 1) )
+      {
+        urlPath += headerKeys[i] + "=" + value + "&";
+      }
+      else
+      {
+        urlPath += headerKeys[i] + "=" + value;
+      }
+    }
+    return urlPath;
+  }
+
+  public doPost( urlPath : string, requestInfo : any, httpHeaders : HttpHeaders ) : any // Response Obj
   {
     let requestStrategy : RequestStrategy = new PostRequestStrategy();
     requestStrategy
@@ -26,21 +48,21 @@ export class CommunicatorService {
         .setBody(JSON.stringify(requestInfo))
         .setHeaders(httpHeaders);
 
-    this.doRequest(requestStrategy, returnType);
+    return this.doRequest(requestStrategy);
   }
 
 
-  public doGet( urlPath: string, httpHeaders : HttpHeaders, returnType : any ) : any
+  public doGet( urlPath: string, httpHeaders : HttpHeaders) : void
   {
     let requestStrategy : RequestStrategy = new GetRequestStrategy();
     requestStrategy
         .setUrlPath(this.fixUrl(urlPath))
         .setHeaders(httpHeaders);
 
-    this.doRequest(requestStrategy, returnType);
+    this.doRequest(requestStrategy);
   }
 
-  public doPut(urlPath: string, requestInfo : any, httpHeaders : HttpHeaders, returnType : any ) : any
+  public doPut(urlPath: string, requestInfo : any, httpHeaders : HttpHeaders ) : void
   {
     let requestStrategy : RequestStrategy = new PutRequestStrategy();
     requestStrategy
@@ -48,38 +70,36 @@ export class CommunicatorService {
         .setBody(JSON.stringify(requestInfo))
         .setHeaders(httpHeaders);
 
-    this.doRequest(requestStrategy, returnType);
+    this.doRequest(requestStrategy);
   }
 
-  private doRequest( requestStrategy : RequestStrategy, returnType: any ) //Any Response type.
+  private doRequest(requestStrategy: RequestStrategy) : void //Any Response type.
   {
-    return requestStrategy.sendRequest(this.http)
-        .subscribe( (response : HttpResponse<any>) =>
-        {
-          console.log(response);
-          console.log(response.body)
-          if ( response.ok )
-          {
-            // Success!
 
+    requestStrategy.sendRequest(this.http)
+        .subscribe((response: HttpResponse<any>) =>
+            {
+              console.log(response);
+              console.log(response.body)
+              if (response.ok && response.body.success)
+              {
+                // Success!
+                console.log(response.body.message)
+                console.log(response.body.success)
+                this.observer.successful(response.body);
+              }
+              else
+              {
+                // Unsuccessful, but 200 response.
+                this.observer.unsuccessful(response.body);
+              }
 
-            let object = JSON.parse(response.body);
-            return new LoginResponse(object.success, object.message);
-          }
-          else
-          {
-            // Error, but 200 response.
-            return response.body
-          }
-
-        },
-        (error: HttpErrorResponse) =>
-        {
-          // Error.
-          console.log("Error = " + error.error.valueOf());
-          console.log("Error 2 = " + error.message);
-          return error;
-        });
+            },
+            (error: HttpErrorResponse) =>
+            {
+              // Error.
+              this.observer.error(error);
+            });
   }
 
   private fixUrl(url : string)
@@ -88,7 +108,8 @@ export class CommunicatorService {
   }
 }
 
-export interface RequestStrategy {
+export interface RequestStrategy
+{
   sendRequest(connection : HttpClient): Observable<HttpResponse<any>>;
   setUrlPath(urlPath : string): RequestStrategy;
   setBody(body : string): RequestStrategy;
@@ -131,19 +152,13 @@ export class GetRequestStrategy implements RequestStrategy
 
   sendRequest(connection : HttpClient): Observable<HttpResponse<any>>
   {
-    console.log("Username = " + this.httpHeaders.get('username'));
-    console.log("Password = " + this.httpHeaders.get('password'));
-    console.log("URL PATH = " + this.urlPath);
     return connection.get(this.urlPath, {headers: this.httpHeaders, observe: 'response'});
   }
 
   setHeaders(httpHeaders : HttpHeaders)
   {
     this.httpHeaders = httpHeaders;
-
-    // Adds key & values to urlPath (so that a query section is appended on, the headers don't seem to work).
-    this.addQueryToString();
-
+    this.urlPath += CommunicatorService.addQueryToString(this.httpHeaders)
     return this;
   }
 
@@ -153,28 +168,10 @@ export class GetRequestStrategy implements RequestStrategy
     return this;
   }
 
-  setBody(body: string): RequestStrategy {
+  setBody(body: string): RequestStrategy
+  {
     // Not implemented.
     return this;
-  }
-
-  private addQueryToString() : void
-  {
-    let headerKeys = this.httpHeaders.keys();
-    this.urlPath += "?"
-    for ( let i = 0; i < headerKeys.length; i++ )
-    {
-      let value = this.httpHeaders.get(headerKeys[i]);
-
-      if ( i != (headerKeys.length - 1) )
-      {
-        this.urlPath += headerKeys[i] + "=" + value + "&";
-      }
-      else
-      {
-        this.urlPath += headerKeys[i] + "=" + value;
-      }
-    }
   }
 }
 
@@ -191,6 +188,8 @@ export class PutRequestStrategy implements RequestStrategy
   setHeaders(httpHeaders : HttpHeaders)
   {
     this.httpHeaders = httpHeaders;
+    // Adds key & values to urlPath (so that a query section is appended on, the headers don't seem to work).
+    this.urlPath += CommunicatorService.addQueryToString(this.httpHeaders)
     return this;
   }
 
@@ -205,4 +204,15 @@ export class PutRequestStrategy implements RequestStrategy
     this.body = body;
     return this;
   }
+}
+
+
+@Injectable({
+  providedIn: 'root'
+})
+export abstract class Observer
+{
+  abstract successful(responseBody : any);
+  abstract unsuccessful(responseBody : any);
+  abstract error(error : HttpErrorResponse);
 }

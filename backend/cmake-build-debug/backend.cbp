@@ -182,6 +182,30 @@
 		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/main.cpp">
 			<Option target="backend"/>
 		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/net/IJsonDeserializer.h">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/net/IJsonSerializer.h">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/net/StaticJsonSerializer.h">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/net/request/LoginRequest.h">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/net/request/RegisterRequest.h">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/net/response/LoginResponse.h">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/net/response/RegisterResponse.h">
+			<Option target="backend"/>
+		</Unit>
+		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/net/response/Response.h">
+			<Option target="backend"/>
+		</Unit>
 		<Unit filename="/Users/tyler/PersonalProjects/business-essentials/backend/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

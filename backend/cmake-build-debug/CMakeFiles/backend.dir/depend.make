@@ -138,4 +138,9 @@ CMakeFiles/backend.dir/main.cpp.o: ../config/mongoose/WebController.h
 CMakeFiles/backend.dir/main.cpp.o: ../config/mongoose/WebSocket.h
 CMakeFiles/backend.dir/main.cpp.o: ../config/mongoose/WebSockets.h
 CMakeFiles/backend.dir/main.cpp.o: ../main.cpp
+CMakeFiles/backend.dir/main.cpp.o: ../net/IJsonDeserializer.h
+CMakeFiles/backend.dir/main.cpp.o: ../net/IJsonSerializer.h
+CMakeFiles/backend.dir/main.cpp.o: ../net/StaticJsonSerializer.h
+CMakeFiles/backend.dir/main.cpp.o: ../net/request/LoginRequest.h
+CMakeFiles/backend.dir/main.cpp.o: ../net/response/LoginResponse.h
 

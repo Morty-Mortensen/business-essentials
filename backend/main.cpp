@@ -4,38 +4,63 @@
 #include <zconf.h>
 #include "config/mongoose/Server.h"
 #include "config/mongoose/WebController.h"
-//#include <json/json.h>
+#include "net/request/LoginRequest.h"
+#include "net/response/LoginResponse.h"
+#include <json/json.h>
+#include "net/StaticJsonSerializer.h"
 
 
 using namespace std;
 using namespace Mongoose;
 
+
 class TestController : public WebController
 {
 public:
-    void hello(Request &request, StreamResponse &response)
+    void login(Request &request, StreamResponse &response)
     {
         // LoginRequest
-        string username = request.get("username");
-        string password = request.get("password");
-        cout << "DATA: " << request.getData() << endl;
 
-        cout << "Client username: " << username << endl;
-        cout << "Client password: " << password << endl;
+        cout << "I made it!" << endl;
 
-        response << "{\"success\":\"true\"}" << endl;
-//        response << "{\"success\":\"true\", \"message\":\"\"\"\"}" << endl;
+        // Converts request to LoginRequest object.
+        LoginRequest loginRequest;
+        StaticJsonSerializer::deserialize(&loginRequest, request);
+
+        cout << "Username = " << loginRequest.getUsername() << endl;
+        cout << "Password = " << loginRequest.getPassword() << endl;
+
+        LoginResponse loginResponse = LoginResponse();
+        if (loginRequest.getUsername() == "Tyler" && loginRequest.getPassword() == "Password1" )
+        {
+            loginResponse.setSuccess(true);
+        }
+        else
+        {
+            loginResponse.setSuccess(false);
+            loginResponse.setMessage("Incorrect Username or Password");
+        }
 
 
-        // LoginResponse
-//        response  << "{\"request\":\"Hello " << request.get("name", "... what is your name?") << "\"}" << endl;
+        // Converts LoginResponse to JSON and stores it in "output".
+        string output;
+        StaticJsonSerializer::serialize(&loginResponse, output);
+
+        cout << output << endl;
+
+        response << output << endl;
     }
 
     void setup()
     {
-        addRoute("GET", "/login", TestController, hello);
+        addRoute("GET", "/login", TestController, login);
     }
 };
+
+//void jsonTest(string testString, auto classType)
+//{
+//
+//}
 
 
 
@@ -52,6 +77,27 @@ int main(int argc, char** argv) {
     while (true) {
         sleep(10);
     }
+
+//    string username = "Tyler";
+//    string password = "123";
+//
+//    LoginRequest request = LoginRequest(username, password);
+//    LoginResponse response = LoginResponse(true);
+//
+//
+//    Json::Value root;
+//    root["success"] = response.getSuccess();
+//    root["message"] = response.getMessage();
+//
+//    Json::StyledWriter writer;
+//    string output = writer.write(root);
+//
+//    cout << output << endl;
+
+
+
+
+
 
 
 

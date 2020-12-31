@@ -1,15 +1,57 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {UserInformationCardComponent} from "../../components/user-information-card/user-information-card.component";
+import {LoginRequest} from "../../model/request/LoginRequest";
+import {LoginResponse} from "../../model/response/LoginResponse";
+import {LoginObserver, LoginService} from "../../service/login.service";
+import {HttpErrorResponse} from "@angular/common/http";
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent extends LoginObserver implements OnInit {
 
-  constructor() { }
+  private loginService : LoginService = new LoginService(this);
+  public saving : boolean = false;
+  public success : boolean = false;
+  public errorMessage : string = "";
+
+  constructor()
+  {
+    super();
+  }
 
   ngOnInit(): void {
+
+  }
+
+
+
+  public async login(request : LoginRequest)
+  {
+    this.success = false;
+    this.errorMessage = "";
+    this.saving = true;
+    this.loginService.login(request);
+  }
+
+  loginSuccessful(loginResponse: LoginResponse)
+  {
+    this.saving = false;
+    this.success = true;
+  }
+
+  loginUnsuccessful(loginResponse: LoginResponse)
+  {
+    this.saving = false;
+    this.errorMessage = loginResponse.message;
+  }
+
+  loginError(error: HttpErrorResponse)
+  {
+    this.saving = false;
+    alert(error.message);
   }
 
 }

@@ -5,6 +5,11 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(backend
         main.cpp
+        net/response/Response.h
+        net/response/RegisterResponse.h
+        net/response/LoginResponse.h
+        net/request/RegisterRequest.h
+        net/request/LoginRequest.h
         config/mongoose.c
         config/mongoose.h
         config/mongoose/Controller.cpp
@@ -38,6 +43,8 @@ add_executable(backend
         config/mongoose/WebSocket.h
         config/mongoose/WebSockets.cpp
         config/mongoose/WebSockets.h
-)
+        net/IJsonSerializer.h
+        net/IJsonDeserializer.h
+        net/StaticJsonSerializer.h)
 
 target_link_libraries(backend ${CMAKE_SOURCE_DIR}/config/libjsoncpp.a)

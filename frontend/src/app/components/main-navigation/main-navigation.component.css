@@ -28,6 +28,12 @@
     color: black;
 }
 
+.route-decoration-selected
+{
+    text-decoration: none;
+    color: #F8B723;
+}
+
 .route-item
 {
     background-color: #FCFBFC;

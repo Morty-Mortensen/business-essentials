@@ -1,8 +1,9 @@
 import {Component, OnInit, ChangeDetectorRef, Output, EventEmitter} from '@angular/core';
 import { faAngleDown, faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import {Route, Router} from "@angular/router";
+import {NavigationEnd, Route, Router} from "@angular/router";
 import {RouteDisplay} from "../../domain/RouteDisplay";
 import {TitleCasePipe} from "@angular/common";
+import {filter} from "rxjs/operators";
 
 @Component({
   selector: 'app-main-navigation',
@@ -23,12 +24,31 @@ export class MainNavigationComponent implements OnInit {
   private mainKey : number = null;
   private firstChildKey : number = null;
   private secondChildKey : number = null;
+  private currUrl : string = "";
 
   public routesWithoutException : Array<RouteDisplay> = []
 
 
 
-  constructor(private route: Router, public titleCasePipe: TitleCasePipe) {}
+  constructor(private route: Router, public titleCasePipe: TitleCasePipe)
+  {
+    // Check if main page.
+    this.route.events.pipe(filter(e => e instanceof NavigationEnd))
+        .subscribe((s: NavigationEnd) =>
+        {
+          this.currUrl = s.urlAfterRedirects;
+          if ( s.urlAfterRedirects === '/' )
+          {
+            this.mainRoutes.forEach((route : RouteDisplay, id : number) =>
+            {
+              return route.selected = false;
+            });
+            this.mainChildren = [];
+            this.firstChildren = [];
+            this.secondChildren = [];
+          }
+        });
+  }
 
   private getAllRoutesWithoutException(currUrl, children: Route[])
   {
@@ -114,6 +134,38 @@ export class MainNavigationComponent implements OnInit {
         && path !== ''
   }
 
+  public findSelectedByRoute(routes : Array<RouteDisplay>) : Array<RouteDisplay>
+  {
+    routes.forEach((route : RouteDisplay) =>
+    {
+      if ( this.currUrl.includes(route.pathName) )
+      {
+        return route.selected = true;
+      }
+      else
+      {
+        return route.selected = false;
+      }
+    })
+    return routes;
+  }
+
+  findSelectedById(routes: Array<RouteDisplay>, key : number) : Array<RouteDisplay>
+  {
+    routes.forEach((route : RouteDisplay) =>
+    {
+      if ( route.id === key )
+      {
+        return route.selected = true;
+      }
+      else
+      {
+        return route.selected = false;
+      }
+    });
+    return routes;
+  }
+
   public getMainKey(key : number)
   {
     if ( this.mainChildren.length && this.mainKey === key )
@@ -124,6 +176,18 @@ export class MainNavigationComponent implements OnInit {
     {
       this.mainKey = key;
       this.mainChildren = this.routes.get(key);
+
+      // Reset main route colors.
+      this.mainRoutes.forEach((route : RouteDisplay, id : number) =>
+      {
+        return route.selected = false;
+      });
+
+      // Update to the current dropdown selected.
+      this.mainRoutes.get(key).selected = true;
+
+      this.mainChildren = this.findSelectedByRoute(this.mainChildren);
+
     }
 
 
@@ -142,6 +206,9 @@ export class MainNavigationComponent implements OnInit {
     {
       this.firstChildKey = key;
       this.firstChildren = this.routes.get(key);
+
+      this.mainChildren = this.findSelectedById(this.mainChildren, key);
+      this.firstChildren = this.findSelectedByRoute(this.firstChildren);
     }
 
     this.secondChildren = [];
@@ -149,22 +216,33 @@ export class MainNavigationComponent implements OnInit {
 
   public getSecondChildKey(key : number)
   {
+    this.firstChildren = this.findSelectedById(this.firstChildren, key);
     this.secondChildren = this.routes.get(key);
+    this.secondChildren = this.findSelectedByRoute(this.secondChildren);
   }
 
-  public clearRoutes()
+  public clearRoutes(key? : number)
   {
+    if ( key !== undefined )
+    {
+      this.mainRoutes.forEach((route : RouteDisplay, id : number) =>
+      {
+        return route.selected = false;
+      });
+      this.mainRoutes.get(key).selected = true;
+    }
+
     this.mainChildren = [];
     this.firstChildren = [];
     this.secondChildren = [];
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void
+  {
     if ( this.routes.size === 0 )
     {
       this.getAllRoutes(this.parentId,'/', this.route.config, 0);
       this.getAllRoutesWithoutException('/', this.route.config);
     }
   }
-
 }

@@ -1,1 +1,11 @@
-<p>accounting works!</p>
+<div class="accounting-container">
+    <app-main-image
+            [image]="'accounting_main.jpg'"
+            [normalTextFirstPart]="''"
+            [normalTextSecondPart]="'Accounting'"
+            [abnormalText]="''"
+            [rightTextDistance]="'100px'"
+            [bottomTextDistance]="'0px'">
+    </app-main-image>
+    <router-outlet></router-outlet>
+</div>

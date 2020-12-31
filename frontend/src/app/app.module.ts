@@ -21,6 +21,10 @@ import { UserInformationCardComponent } from './components/user-information-card
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import {TitleCasePipe} from "@angular/common";
+import { MainImageComponent } from './components/main-image/main-image.component';
+import { WhyAccountingComponent } from './views/accounting/why-accounting/why-accounting.component';
+import { AccountingBussinessEssentialsComponent } from './views/accounting/accounting-bussiness-essentials/accounting-bussiness-essentials.component';
+import { AccountingBlogComponent } from './views/accounting/accounting-blog/accounting-blog.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +42,10 @@ import {TitleCasePipe} from "@angular/common";
     RegisterComponent,
     LoginComponent,
     UserInformationCardComponent,
+    MainImageComponent,
+    WhyAccountingComponent,
+    AccountingBussinessEssentialsComponent,
+    AccountingBlogComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,12 +1,15 @@
 
 <div class="home-container">
-<!--    Make a big picture component later (for sub pages)-->
-    <div class="home-main-picture-container">
-        <img class="home-main-picture" src="assets/main_page.jpg"/>
-        <div class="home-picture-text-container">
-            <h1 class="home-picture-text-normal">Discover the <h2 class="home-picture-text-abnormal">Un</h2>imaginable</h1>
-        </div>
-    </div>
+
+        <app-main-image
+        [image]="'main_page.jpg'"
+        [normalTextFirstPart]="'Discover the'"
+        [normalTextSecondPart]="'imaginable'"
+        [abnormalText]="'Un'"
+        [rightTextDistance]="'50px'"
+        [bottomTextDistance]="'85px'">
+        </app-main-image>
+
     <div class="home-articles-container">
         <app-article-display-box
                 [title]="'Title Here'"

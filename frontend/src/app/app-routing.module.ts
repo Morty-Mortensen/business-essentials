@@ -6,6 +6,9 @@ import {LoginComponent} from "./views/login/login.component";
 import {AccountingComponent} from "./views/accounting/accounting.component";
 import {MarketingComponent} from "./views/marketing/marketing.component";
 import {FinanceComponent} from "./views/finance/finance.component";
+import {WhyAccountingComponent} from "./views/accounting/why-accounting/why-accounting.component";
+import {AccountingBussinessEssentialsComponent} from "./views/accounting/accounting-bussiness-essentials/accounting-bussiness-essentials.component";
+import {AccountingBlogComponent} from "./views/accounting/accounting-blog/accounting-blog.component";
 
 
 const routes: Routes =
@@ -22,12 +25,9 @@ const routes: Routes =
       {
         path: 'accounting', component: AccountingComponent,
           children: [
-              { path: 'why-accounting', component: HomeComponent,
-              children: [
-                  { path: 'test-accounting-third-tire', component: HomeComponent }
-              ]},
-              { path: 'accounting-business-essentials', component: HomeComponent },
-              { path: 'accounting-blog', component: HomeComponent },
+              { path: 'why-accounting', component: WhyAccountingComponent },
+              { path: 'accounting-business-essentials', component: AccountingBussinessEssentialsComponent },
+              { path: 'accounting-blog', component: AccountingBlogComponent },
           ]
       },
       {

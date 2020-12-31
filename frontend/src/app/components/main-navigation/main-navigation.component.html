@@ -1,7 +1,7 @@
 <div class="main-navigation-container">
     <div class="main-navigation-links-container">
         <h4 *ngFor="let key of mainRoutes.keys()">
-            <a routerLink="{{mainRoutes.get(key).pathName}}" (click)="clearRoutes()" class="route-decoration">
+            <a routerLink="{{mainRoutes.get(key).pathName}}" (click)="clearRoutes(key)" [class.route-decoration]="!mainRoutes.get(key).selected" [class.route-decoration-selected]="mainRoutes.get(key).selected">
                 {{titleCasePipe.transform(mainRoutes.get(key).displayName)}}
             </a>
 
@@ -14,14 +14,14 @@
         <div *ngIf="mainChildren.length">
             <div *ngFor="let child of mainChildren">
                 <div *ngIf="child.id !== null" class="route-item">
-                    <a routerLink="{{child.pathName}}" (click)="clearRoutes()" class="route-decoration">
+                    <a routerLink="{{child.pathName}}" (click)="clearRoutes()" [class.route-decoration]="!child.selected" [class.route-decoration-selected]="child.selected">
                         {{titleCasePipe.transform(child.displayName)}}
                     </a>
                     <fa-icon (click)="getFirstChildKey(child.id)" class="main-navigation-down-arrow-icon" [icon]="faAngleDown"></fa-icon>
                 </div>
 
                 <div *ngIf="child.id === null" class="route-item">
-                    <a routerLink="{{child.pathName}}" (click)="clearRoutes()" class="route-decoration">
+                    <a routerLink="{{child.pathName}}" (click)="clearRoutes()" [class.route-decoration]="!child.selected" [class.route-decoration-selected]="child.selected">
                         {{titleCasePipe.transform(child.displayName)}}
                     </a>
                 </div>
@@ -37,14 +37,14 @@
         <div *ngIf="firstChildren.length">
             <div *ngFor="let child of firstChildren">
                 <div *ngIf="child.id !== null" class="route-item">
-                    <a routerLink="{{child.pathName}}" (click)="clearRoutes()" class="route-decoration">
+                    <a routerLink="{{child.pathName}}" (click)="clearRoutes()" [class.route-decoration]="!child.selected" [class.route-decoration-selected]="child.selected">
                         {{titleCasePipe.transform(child.displayName)}}
                     </a>
                     <fa-icon (click)="getSecondChildKey(child.id)" class="main-navigation-down-arrow-icon" [icon]="faAngleDown"></fa-icon>
                 </div>
 
                 <div *ngIf="child.id === null" class="route-item">
-                    <a routerLink="{{child.pathName}}" (click)="clearRoutes()" class="route-decoration">
+                    <a routerLink="{{child.pathName}}" (click)="clearRoutes()" [class.route-decoration]="!child.selected" [class.route-decoration-selected]="child.selected">
                         {{titleCasePipe.transform(child.displayName)}}
                     </a>
                 </div>
@@ -60,14 +60,14 @@
         <div *ngIf="secondChildren.length">
             <div *ngFor="let child of secondChildren">
                 <div *ngIf="child.id !== null" class="route-item">
-                    <a routerLink="{{child.pathName}}" class="route-decoration">
+                    <a routerLink="{{child.pathName}}" [class.route-decoration]="!child.selected" [class.route-decoration-selected]="child.selected">
                         {{titleCasePipe.transform(child.displayName)}}
                     </a>
                     <fa-icon (click)="getSecondChildKey(child.id)" class="main-navigation-down-arrow-icon" [icon]="faAngleDown"></fa-icon>
                 </div>
 
                 <div *ngIf="child.id === null" class="route-item">
-                    <a routerLink="{{child.pathName}}" class="route-decoration">
+                    <a routerLink="{{child.pathName}}" [class.route-decoration]="!child.selected" [class.route-decoration-selected]="child.selected">
                         {{titleCasePipe.transform(child.displayName)}}
                     </a>
                 </div>

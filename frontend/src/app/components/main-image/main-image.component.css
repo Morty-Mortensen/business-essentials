@@ -1,0 +1,40 @@
+:host
+{
+    width: 100%;
+}
+
+.home-main-picture-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.home-main-picture
+{
+    width: 100%;
+    height: 850px;
+}
+
+.home-picture-text-container
+{
+    position: absolute;
+    z-index: 1;
+}
+
+.home-picture-text-normal
+{
+    display: inline-block;
+    opacity: 0.62;
+    color: white;
+    font-size: 40px;
+}
+
+.home-picture-text-abnormal
+{
+    display: inline-block;
+    opacity: 0.62;
+    color: black;
+}

@@ -1,0 +1,15 @@
+.article-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    border-radius: 50px;
+    box-shadow: 2px 5px 15px #707070;
+}
+
+.article-container:hover
+{
+    background-color: #FCFBFC;
+}

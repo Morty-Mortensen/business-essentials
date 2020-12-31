@@ -11,6 +11,7 @@ export class ArticleDisplayBoxComponent implements OnInit {
   @Input() subtitle : string = ""
   @Input() imageRef : string = ""
   @Input() description : string = ""
+  @Input() link : string = ""
 
 
 

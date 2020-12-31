@@ -1,1 +1,31 @@
-<p>accounting-bussiness-essentials works!</p>
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100%;">
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 75%; height: 100%; padding: 35px; background-color: #FCFBFC; border-radius: 0 0 10px 10px">
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100%;">
+            <h1>Accounting Business Essentials</h1>
+        </div>
+    </div>
+
+    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; width: 100%; height: 100%;">
+        <div style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: center; width: 100%; padding: 100px 0 100px 0; height: 100%;">
+
+            <fa-icon style="font-size: 80px" [style.color]="canDisplayLess() ? '#FFC541' : '#E2E2E2'" [icon]="faAngleLeft" (click)="displayMoreLeft()" ></fa-icon>
+
+            <ng-container *ngFor="let card of accountingBusinessEssential3Displayed">
+                <app-article-display-box
+                        [title]="card.title"
+                        [subtitle]="card.subtitle"
+                        [imageRef]="card.image"
+                        [description]="card.description"
+                        [link]="card.link"></app-article-display-box>
+            </ng-container>
+
+            <fa-icon style="font-size: 80px" [style.color]="canDisplayMore() ? '#FFC541' : '#E2E2E2'" [icon]="faAngleRight" (click)="displayMoreRight()" ></fa-icon>
+        </div>
+
+    </div>
+
+
+    <!--    background-color: #FCFBFC-->
+
+</div>
+

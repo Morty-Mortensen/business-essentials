@@ -43,10 +43,16 @@ export class MainNavigationComponent implements OnInit {
             {
               return route.selected = false;
             });
-            this.mainChildren = [];
-            this.firstChildren = [];
-            this.secondChildren = [];
+
           }
+          else
+          {
+            this.mainRoutes = this.findSelectedByRouteMap(this.mainRoutes);
+          }
+
+          this.mainChildren = [];
+          this.firstChildren = [];
+          this.secondChildren = [];
         });
   }
 
@@ -137,6 +143,22 @@ export class MainNavigationComponent implements OnInit {
   public findSelectedByRoute(routes : Array<RouteDisplay>) : Array<RouteDisplay>
   {
     routes.forEach((route : RouteDisplay) =>
+    {
+      if ( this.currUrl.includes(route.pathName) )
+      {
+        return route.selected = true;
+      }
+      else
+      {
+        return route.selected = false;
+      }
+    })
+    return routes;
+  }
+
+  public findSelectedByRouteMap(routes : Map<Number,RouteDisplay>) : Map<Number,RouteDisplay>
+  {
+    routes.forEach((route : RouteDisplay, id : number) =>
     {
       if ( this.currUrl.includes(route.pathName) )
       {

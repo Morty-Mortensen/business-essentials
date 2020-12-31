@@ -25,6 +25,7 @@ import { MainImageComponent } from './components/main-image/main-image.component
 import { WhyAccountingComponent } from './views/accounting/why-accounting/why-accounting.component';
 import { AccountingBussinessEssentialsComponent } from './views/accounting/accounting-bussiness-essentials/accounting-bussiness-essentials.component';
 import { AccountingBlogComponent } from './views/accounting/accounting-blog/accounting-blog.component';
+import { AccountingFortuneFivehundredComponent } from './views/accounting/accounting-bussiness-essentials/accounting-fortune-fivehundred/accounting-fortune-fivehundred.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { AccountingBlogComponent } from './views/accounting/accounting-blog/acco
     WhyAccountingComponent,
     AccountingBussinessEssentialsComponent,
     AccountingBlogComponent,
+    AccountingFortuneFivehundredComponent,
   ],
   imports: [
     BrowserModule,

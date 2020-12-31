@@ -9,6 +9,7 @@ import {FinanceComponent} from "./views/finance/finance.component";
 import {WhyAccountingComponent} from "./views/accounting/why-accounting/why-accounting.component";
 import {AccountingBussinessEssentialsComponent} from "./views/accounting/accounting-bussiness-essentials/accounting-bussiness-essentials.component";
 import {AccountingBlogComponent} from "./views/accounting/accounting-blog/accounting-blog.component";
+import {AccountingFortuneFivehundredComponent} from "./views/accounting/accounting-bussiness-essentials/accounting-fortune-fivehundred/accounting-fortune-fivehundred.component";
 
 
 const routes: Routes =
@@ -26,7 +27,10 @@ const routes: Routes =
         path: 'accounting', component: AccountingComponent,
           children: [
               { path: 'why-accounting', component: WhyAccountingComponent },
-              { path: 'accounting-business-essentials', component: AccountingBussinessEssentialsComponent },
+              { path: 'accounting-business-essentials', component: AccountingBussinessEssentialsComponent,
+              children : [
+                  { path: 'accounting-fortune-fivehundred', component: AccountingFortuneFivehundredComponent }
+              ]},
               { path: 'accounting-blog', component: AccountingBlogComponent },
           ]
       },

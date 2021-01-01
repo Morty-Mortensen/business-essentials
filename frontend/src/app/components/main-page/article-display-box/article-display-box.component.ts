@@ -12,6 +12,7 @@ export class ArticleDisplayBoxComponent implements OnInit {
   @Input() imageRef : string = ""
   @Input() description : string = ""
   @Input() link : string = ""
+  @Input() itemBelow : boolean = false;
 
 
 

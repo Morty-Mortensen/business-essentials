@@ -1,0 +1,21 @@
+:host
+{
+    width: 100%;
+}
+
+.link-item
+{
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.link-item:hover
+{
+    color: #F8B723;
+    cursor: pointer;
+}
+
+.link-item:active
+{
+    color: #EBA402;
+}

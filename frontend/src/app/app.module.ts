@@ -26,6 +26,7 @@ import { WhyAccountingComponent } from './views/accounting/why-accounting/why-ac
 import { AccountingBussinessEssentialsComponent } from './views/accounting/accounting-bussiness-essentials/accounting-bussiness-essentials.component';
 import { AccountingBlogComponent } from './views/accounting/accounting-blog/accounting-blog.component';
 import { AccountingFortuneFivehundredComponent } from './views/accounting/accounting-bussiness-essentials/accounting-fortune-fivehundred/accounting-fortune-fivehundred.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { AccountingFortuneFivehundredComponent } from './views/accounting/accoun
     AccountingBussinessEssentialsComponent,
     AccountingBlogComponent,
     AccountingFortuneFivehundredComponent,
+    SearchBarComponent,
   ],
   imports: [
     BrowserModule,

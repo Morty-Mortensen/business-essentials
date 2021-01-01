@@ -1,0 +1,10 @@
+<div class="header-search-input-container">
+    <fa-icon class="header-search-icon" [icon]="faSearch"></fa-icon>
+    <div>
+        <input [(ngModel)]="search" (ngModelChange)="searchRoutes($event)" class="search-field" [style.width]="width" type="text" placeholder="{{placeholder}}"/>
+    </div>
+</div>
+
+<div *ngIf="search.length" class="search-items-container">
+    <div *ngFor="let route of searchResults" class="search-item"> <a class="search-item-link" (click)="clearSearch()" routerLink="{{route.pathName}}">{{titleCasePipe.transform(route.displayName)}}</a></div>
+</div>

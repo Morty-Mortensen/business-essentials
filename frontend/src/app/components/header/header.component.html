@@ -1,16 +1,9 @@
 <div class="header-container">
     <div class="header-search-container">
         <div class="header-sub-search-container">
-            <div class="header-search-input-container">
-                <fa-icon class="header-search-icon" [icon]="faSearch"></fa-icon>
-                <div>
-                    <input [(ngModel)]="search" (ngModelChange)="searchRoutes($event)" class="search-field" type="text" placeholder="Search..."/>
-                </div>
-            </div>
-
-            <div *ngIf="search.length" class="search-items-container">
-                <div *ngFor="let route of searchResults" class="search-item"> <a class="search-item-link" (click)="clearSearch()" routerLink="{{route.pathName}}">{{titleCasePipe.transform(route.displayName)}}</a></div>
-            </div>
+            <app-search-bar
+            [searchOptions]="searchOptionsHeader">
+            </app-search-bar>
             <div class="header-logo-container-media">
                 <a routerLink="/">
                     <img class="header-logo-media" src="assets/logo2.png"/>

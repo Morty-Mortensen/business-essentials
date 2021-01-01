@@ -1,7 +1,7 @@
 import {Component, OnInit, ChangeDetectorRef, Output, EventEmitter} from '@angular/core';
 import { faAngleDown, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import {NavigationEnd, Route, Router} from "@angular/router";
-import {RouteDisplay} from "../../domain/RouteDisplay";
+import {RouteDisplay} from "../../domain/RouteDisplay/RouteDisplay";
 import {TitleCasePipe} from "@angular/common";
 import {filter} from "rxjs/operators";
 
@@ -26,7 +26,7 @@ export class MainNavigationComponent implements OnInit {
   private secondChildKey : number = null;
   private currUrl : string = "";
 
-  public routesWithoutException : Array<RouteDisplay> = []
+  public static routesWithoutException : Array<RouteDisplay> = []
 
 
 
@@ -64,7 +64,7 @@ export class MainNavigationComponent implements OnInit {
 
       if ( displayLabel !== '' )
       {
-        this.routesWithoutException.push(new RouteDisplay(null, displayLabel, currUrl + children[i].path));
+        MainNavigationComponent.routesWithoutException.push(new RouteDisplay(null, displayLabel, currUrl + children[i].path));
       }
 
       if ( children[i].children !== undefined )

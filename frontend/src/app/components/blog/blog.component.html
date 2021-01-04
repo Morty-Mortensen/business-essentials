@@ -1,0 +1,51 @@
+<div class="blog-container">
+    <div class="blog-inner-container">
+        <app-search-bar
+                [searchOptions]="searchOptionsBlog"
+                [placeholder]="searchOptionsPlaceHolder"
+                [width]="'200px'">
+        </app-search-bar>
+
+        <div class="blog-navigation-container">
+            <app-dropdown-navigation-items
+                    [articlesByCategoryWithDropdown]="articlesByYear"
+                    [title]="'Years'">
+            </app-dropdown-navigation-items>
+            <hr class="divider-line"/>
+            <app-dropdown-navigation-items
+                    [articlesByCategoryWithDropdown]="articlesByCategory"
+                    [title]="'Categories'">
+            </app-dropdown-navigation-items>
+            <hr class="divider-line"/>
+            <div class="blog-non-dropdown-navigation-container">
+                <app-dropdown-navigation-items
+                        [articlesByCategoryWithoutDropdown]="userArticles"
+                        [title]="'Your Articles'">
+                </app-dropdown-navigation-items>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-post-container">
+        <h1>{{currentArticle.title}}</h1>
+        <p>By: {{currentArticle.author}}</p>
+        <div class="blog-post-img-container">
+            <img class="blog-post-img" src="{{currentArticle.imageRef}}"/>
+        </div>
+        <div>
+            <p *ngFor="let paragraph of createParagraphs(currentArticle.body)" class="blog-paragraph">{{paragraph}}</p>
+        </div>
+    </div>
+    <div class="blog-related-articles-container">
+        <h1 class="blog-related-articles-title">Related Articles</h1>
+        <div *ngFor="let article of relatedArticles">
+            <app-article-display-box
+                    [title]="article.title"
+                    [subtitle]="article.subtitle"
+                    [imageRef]="article.imageRef"
+                    [description]="article.description"
+                    [link]="article.link"
+                    [itemBelow]="true"></app-article-display-box>
+        </div>
+    </div>
+</div>

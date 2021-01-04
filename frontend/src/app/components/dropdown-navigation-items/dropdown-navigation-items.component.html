@@ -1,0 +1,21 @@
+<div style="margin-bottom: 20px; margin-top: 20px;">
+    <h2>{{title}}</h2>
+    <ul *ngIf="articlesByCategoryWithDropdown.size" style="list-style: none">
+        <li style="font-size: 18px" [style.color]="(isCategorySelected && key == selectedArticlesByCategoryKey) ? '#F8B723' : 'black'" *ngFor="let key of articlesByCategoryWithDropdown.keys()">
+            {{key}}
+            <fa-icon *ngIf="!isCategorySelected || key != selectedArticlesByCategoryKey" style="color: #FFC541" [icon]="faAngleDown" (click)="expandSelectedCategory(key)" ></fa-icon>
+            <fa-icon *ngIf="isCategorySelected && key == selectedArticlesByCategoryKey" style="color: #FFC541" [icon]="faAngleUp" (click)="expandSelectedCategory(key)" ></fa-icon>
+            <ul style="list-style: none" *ngIf="selectedArticlesByCategory.length && key == selectedArticlesByCategoryKey">
+                <a style="color: black; text-decoration: none" *ngFor="let article of selectedArticlesByCategory" (click)="clearCategory()" routerLink="{{article.path}}">
+                    <li class="link-item" style="margin-left: 10px">{{article.title}}</li>
+                </a>
+            </ul>
+        </li>
+    </ul>
+
+    <ul *ngIf="articlesByCategoryWithoutDropdown" style="list-style: none">
+        <li class="link-item" style="font-size: 18px"  *ngFor="let article of articlesByCategoryWithoutDropdown">
+            {{article.title}}
+        </li>
+    </ul>
+</div>

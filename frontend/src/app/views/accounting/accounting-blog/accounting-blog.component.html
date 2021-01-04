@@ -1,79 +1,9 @@
-<div style="display: flex; flex-direction: row; width: 100%; height: 100%; justify-content: space-between; align-items: flex-start; margin-top: 20px">
-    <div style="display: flex; flex-direction: column; width: 100%; height: 100%; justify-content: center; align-items: flex-start; margin-left: 20px">
-        <app-search-bar
-                [searchOptions]="searchOptionsAccountingBlog"
-                [placeholder]="'Accounting Articles Search...'"
-                [width]="'200px'">
-        </app-search-bar>
-
-        <div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; width: 100%; margin-left: 20px; margin-top: 5px">
-            <div style="margin-bottom: 20px; margin-top: 20px;">
-                <h2>Years</h2>
-                <ul style="list-style: none">
-                    <li style="font-size: 18px" [style.color]="(isYearSelected && key == selectedArticlesByYearKey) ? '#F8B723' : 'black'" *ngFor="let key of articlesByYear.keys()">
-                        {{key}}
-                        <fa-icon *ngIf="!isYearSelected || key != selectedArticlesByYearKey" style="color: #FFC541" [icon]="faAngleDown" (click)="expandSelectedYear(key)" ></fa-icon>
-                        <fa-icon *ngIf="isYearSelected && key == selectedArticlesByYearKey" style="color: #FFC541" [icon]="faAngleUp" (click)="expandSelectedYear(key)" ></fa-icon>
-                        <ul style="list-style: none" *ngIf="selectedArticlesByYear.length && key == selectedArticlesByYearKey">
-                            <a style="color: black; text-decoration: none" *ngFor="let article of selectedArticlesByYear" (click)="clearYear()" routerLink="{{article.path}}">
-                                <li class="link-item" style="margin-left: 10px">{{article.title}}</li>
-                            </a>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <hr style="width: 80%"/>
-            <div style="margin-bottom: 20px; margin-top: 20px">
-                <h2>Categories</h2>
-                <ul style="list-style: none">
-                    <li style="font-size: 18px" [style.color]="(isCategorySelected && key == selectedArticlesByCategoryKey) ? '#F8B723' : 'black'" *ngFor="let key of articlesByCategory.keys()">
-                        {{key}}
-                        <fa-icon *ngIf="!isCategorySelected || key != selectedArticlesByCategoryKey" style="color: #FFC541" [icon]="faAngleDown" (click)="expandSelectedCategory(key)" ></fa-icon>
-                        <fa-icon *ngIf="isCategorySelected && key == selectedArticlesByCategoryKey" style="color: #FFC541" [icon]="faAngleUp" (click)="expandSelectedCategory(key)" ></fa-icon>
-                        <ul style="list-style: none" *ngIf="selectedArticlesByCategory.length && key == selectedArticlesByCategoryKey">
-                            <a style="color: black; text-decoration: none" *ngFor="let article of selectedArticlesByCategory" (click)="clearCategory()" routerLink="{{article.path}}">
-                                <li class="link-item" style="margin-left: 10px">{{article.title}}</li>
-                            </a>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <hr style="width: 80%"/>
-            <div style="margin-bottom: 20px; margin-top: 20px">
-                <h2>Your Articles</h2>
-                <ul style="list-style: none">
-                    <li class="link-item" style="font-size: 18px"  *ngFor="let article of userArticles">
-                        {{article.title}}
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div style="display: flex; flex-direction: column; width: 100%; height: 100%; justify-content: center; align-items: center">
-        <h1>Current Blog Article Title</h1>
-        <p>By: Tyler Mortensen</p>
-        <div style="display: flex; justify-content: center; align-items: center; margin-top: 10px; width: 100%; border-radius: 10px">
-            <img style="width: 100%; height: 300px; object-fit: cover; border-radius: 10px" src="assets/dice.jpg"/>
-        </div>
-        <div>
-            <p style="margin-top: 10px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam elementum pulvinar etiam non quam. Lorem sed risus ultricies tristique nulla aliquet enim tortor. Viverra orci sagittis eu volutpat odio facilisis. Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tempus egestas sed sed risus pretium quam. Vitae congue mauris rhoncus aenean vel. Ac turpis egestas integer eget aliquet nibh praesent tristique. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Nulla aliquet enim tortor at auctor urna nunc id. Faucibus in ornare quam viverra orci sagittis eu.</p>
-            <p style="margin-top: 10px">Elementum facilisis leo vel fringilla est ullamcorper eget nulla facilisi. Ut sem nulla pharetra diam sit amet nisl suscipit adipiscing. Tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Hac habitasse platea dictumst quisque sagittis purus. Maecenas accumsan lacus vel facilisis volutpat est velit egestas dui. Consequat interdum varius sit amet mattis vulputate enim nulla aliquet. Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque. Vitae proin sagittis nisl rhoncus mattis. Magnis dis parturient montes nascetur ridiculus mus mauris vitae. Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Ut tristique et egestas quis ipsum suspendisse ultrices gravida. Ornare lectus sit amet est placerat. Mattis rhoncus urna neque viverra justo.</p>
-            <p style="margin-top: 10px">Ut sem nulla pharetra diam sit amet nisl suscipit adipiscing. Id interdum velit laoreet id donec ultrices tincidunt arcu non. Arcu vitae elementum curabitur vitae. Lacus viverra vitae congue eu. Montes nascetur ridiculus mus mauris vitae ultricies leo. Enim neque volutpat ac tincidunt vitae semper quis. Odio pellentesque diam volutpat commodo sed egestas. Faucibus vitae aliquet nec ullamcorper sit amet risus. Condimentum id venenatis a condimentum vitae sapien pellentesque. Eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque. Nec feugiat nisl pretium fusce id velit ut. Risus ultricies tristique nulla aliquet enim tortor at auctor. Id cursus metus aliquam eleifend mi in nulla posuere. Dui nunc mattis enim ut tellus.</p>
-            <p style="margin-top: 10px">Pulvinar etiam non quam lacus suspendisse faucibus. Urna cursus eget nunc scelerisque. Tristique nulla aliquet enim tortor at auctor urna. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Scelerisque felis imperdiet proin fermentum. Eu sem integer vitae justo eget magna. Id semper risus in hendrerit gravida rutrum quisque non. Morbi tristique senectus et netus et. Facilisis volutpat est velit egestas dui id. Faucibus a pellentesque sit amet porttitor eget. Cras adipiscing enim eu turpis. Tortor aliquam nulla facilisi cras fermentum odio. Justo nec ultrices dui sapien. Nullam vehicula ipsum a arcu. Aenean pharetra magna ac placerat. Id aliquet lectus proin nibh. Imperdiet massa tincidunt nunc pulvinar sapien. Egestas purus viverra accumsan in nisl nisi scelerisque eu.</p>
-            <p style="margin-top: 10px; margin-bottom: 10px">Ultrices in iaculis nunc sed augue lacus viverra. Leo vel orci porta non pulvinar neque laoreet suspendisse interdum. Donec ultrices tincidunt arcu non sodales neque sodales ut. Viverra adipiscing at in tellus integer feugiat scelerisque varius morbi. Facilisis volutpat est velit egestas dui id ornare arcu odio. Aliquet risus feugiat in ante metus. Egestas congue quisque egestas diam in arcu cursus euismod. Ac ut consequat semper viverra nam. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Suscipit tellus mauris a diam. Ac auctor augue mauris augue neque gravida in fermentum. Egestas erat imperdiet sed euismod nisi porta lorem mollis. Tellus elementum sagittis vitae et leo duis ut. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Vitae sapien pellentesque habitant morbi tristique senectus. At volutpat diam ut venenatis tellus. Tellus molestie nunc non blandit massa enim nec dui. Gravida quis blandit turpis cursus in. Sit amet consectetur adipiscing elit duis.</p>
-        </div>
-    </div>
-    <div style="display: flex; flex-direction: column; width: 100%; height: 100%; justify-content: center; align-items: center;">
-        <h1 style="margin-bottom: 20px">Related Articles</h1>
-        <div *ngFor="let article of relatedArticles">
-            <app-article-display-box
-                    [title]="article.title"
-                    [subtitle]="article.subtitle"
-                    [imageRef]="article.imageRef"
-                    [description]="article.description"
-                    [link]="article.link"
-                    [itemBelow]="true"></app-article-display-box>
-        </div>
-    </div>
-</div>
+<app-blog
+[searchOptionsPlaceHolder]="'Accounting Articles Search...'"
+[articlesByYear]="articlesByYear"
+[articlesByCategory]="articlesByCategory"
+[userArticles]="userArticles"
+[relatedArticles]="relatedArticles"
+[currentArticle]="currentArticle"
+[SEARCH_PATH_PATTERN]="'/accounting/accounting-blog/'">
+</app-blog>

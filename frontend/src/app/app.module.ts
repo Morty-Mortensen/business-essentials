@@ -27,6 +27,8 @@ import { AccountingBussinessEssentialsComponent } from './views/accounting/accou
 import { AccountingBlogComponent } from './views/accounting/accounting-blog/accounting-blog.component';
 import { AccountingFortuneFivehundredComponent } from './views/accounting/accounting-bussiness-essentials/accounting-fortune-fivehundred/accounting-fortune-fivehundred.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { DropdownNavigationItemsComponent } from './components/dropdown-navigation-items/dropdown-navigation-items.component';
+import { BlogComponent } from './components/blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,8 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
     AccountingBlogComponent,
     AccountingFortuneFivehundredComponent,
     SearchBarComponent,
+    DropdownNavigationItemsComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,

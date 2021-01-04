@@ -8,9 +8,10 @@ export class Article
     private readonly _datetime;
     private readonly _category;
     private readonly _path;
+    private readonly _author;
     private _selected;
 
-    constructor(id, title, subtitle, imageRef, body, datetime, category, path, selected?)
+    constructor(id, title, subtitle, imageRef, body, datetime, category, path, author, selected?)
     {
         this._id = id;
         this._title = title;
@@ -21,6 +22,7 @@ export class Article
         this._category = category;
         this._path = path;
         this._selected = selected;
+        this._author = author;
     }
 
     get id()
@@ -66,6 +68,11 @@ export class Article
     get selected()
     {
         return this._selected;
+    }
+
+    get author()
+    {
+        return this._author;
     }
 
     set selected(value)

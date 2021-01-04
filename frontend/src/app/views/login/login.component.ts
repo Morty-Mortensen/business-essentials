@@ -3,7 +3,7 @@ import {UserInformationCardComponent} from "../../components/user-information-ca
 import {LoginRequest} from "../../model/request/LoginRequest";
 import {LoginResponse} from "../../model/response/LoginResponse";
 import {LoginObserver, LoginService} from "../../service/login.service";
-import {HttpErrorResponse} from "@angular/common/http";
+import {HttpClient, HttpErrorResponse, HttpHeaders, HttpResponse} from "@angular/common/http";
 
 @Component({
   selector: 'app-login',
@@ -17,7 +17,7 @@ export class LoginComponent extends LoginObserver implements OnInit {
   public success : boolean = false;
   public errorMessage : string = "";
 
-  constructor()
+  constructor(private http: HttpClient)
   {
     super();
   }
@@ -30,6 +30,7 @@ export class LoginComponent extends LoginObserver implements OnInit {
 
   public async login(request : LoginRequest)
   {
+    console.log("MADE IT HERE!!!");
     this.success = false;
     this.errorMessage = "";
     this.saving = true;
